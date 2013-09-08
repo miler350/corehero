@@ -1,18 +1,120 @@
-<h2>Sign up</h2>
+<!-- Sign In Option 1 -->
+<div id="sign_up1">
+    <div class="container">
+        <div class="row">
+            <div class="span12 header">
+                <h4>Create your account</h4>
+                <p>
+                    There are many variations of passages of Lorem alteration in some form  injected humour these randomised words .</p>
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+					<%= render partial: 'social' %>
+					
+	                <div class="span3 division">
+	                    <div class="line l"></div>
+	                    <span>or</span>
+	                    <div class="line r"></div>
+	                </div>
+					
+					<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+					  <%= devise_error_messages! %>
+					
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
+	                <div class="span12 footer">
+	                    <form>
+	                        <%= f.email_field :email, :autofocus => true, placeholder: "Email", type:"text"  %>
+	                        <%= f.password_field :password, placeholder: "Password", type:"password" %>
+	                        <%= f.password_field :password_confirmation, placeholder: " Confirm Password", type:"password" %>
+							<%= f.submit "Sign up", type: "submit", value:"sign up" %>
+	                    </form>
+	                </div>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+	                <!-- <div class="span5 remember">
+	                    <label class="checkbox">
+	                        <input type="checkbox"> Remember me
+	                    </label>
+	                    <a href="#">Forgot password?</a>
+	                </div> -->
+						
+	                <div class="span12 dosnt">
+	                    <span><br /><br />Already have an account?</span>
+	                    <a href="sign-in.html">Sign in</a>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
 
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
 
-  <div><%= f.submit "Sign up" %></div>
+
+  
+  
+ 
 <% end %>
 
-<%= render "devise/shared/links" %>
+<%#= render "devise/shared/links" %>
+
+    <!-- starts footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="row info">
+                <div class="span6 residence">
+                    <ul>
+                        <li>2301 East Lamar Blvd. Suite 140. City, Arlington.</li>
+                        <li>United States, Zip Code TX 76006.</li>
+                    </ul>
+                </div>
+                <div class="span5 touch">
+                    <ul>
+                        <li><strong>P.</strong> 1 817 274 2933</li>
+                        <li><strong>E.</strong><a href="#"> bootstrap@twitter.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row credits">
+                <div class="span12">
+                    <div class="row social">
+                        <div class="span12">
+                            <a href="#" class="facebook">
+                                <span class="socialicons ico1"></span>
+                                <span class="socialicons_h ico1h"></span>
+                            </a>
+                            <a href="#" class="twitter">
+                                <span class="socialicons ico2"></span>
+                                <span class="socialicons_h ico2h"></span>
+                            </a>
+                            <a href="#" class="gplus">
+                                <span class="socialicons ico3"></span>
+                                <span class="socialicons_h ico3h"></span>
+                            </a>
+                            <a href="#" class="flickr">
+                                <span class="socialicons ico4"></span>
+                                <span class="socialicons_h ico4h"></span>
+                            </a>
+                            <a href="#" class="pinterest">
+                                <span class="socialicons ico5"></span>
+                                <span class="socialicons_h ico5h"></span>
+                            </a>
+                            <a href="#" class="dribble">
+                                <span class="socialicons ico6"></span>
+                                <span class="socialicons_h ico6h"></span>
+                            </a>
+                            <a href="#" class="behance">
+                                <span class="socialicons ico7"></span>
+                                <span class="socialicons_h ico7h"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row copyright">
+                        <div class="span12">
+                            © 2013 Clean Canvas. All rights reserved. Theme by Detail Canvas.
+                        </div>
+                    </div>
+                </div>            
+            </div>
+        </div>
+    </footer>
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+</html>
