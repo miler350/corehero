@@ -364,7 +364,7 @@ header {
     border-radius: 15px;
     padding: 9px 16px 7px;
     font-size: 18px;
-    text-shadow: 0 -1px 0 rgba(255, 101, 0.25);
+    text-shadow: 0 -1px 0 rgba(255, 101, 0, 0.25);
     background-color: #363636;
     border: 1px solid #cccccc;
     border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
@@ -2200,6 +2200,7 @@ cite { }
 
 .services {
   margin-top: 0;
+  background-color: white;
 }
 
 
@@ -2377,7 +2378,7 @@ cite { }
   transition: all .3s;
 }
 #process .areas .circle{
-  margin-right: 
+  margin-right: 0px;
 }
 #process .areas .first{
   margin-left: 0;
