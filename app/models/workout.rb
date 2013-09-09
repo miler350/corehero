@@ -9,8 +9,10 @@ class Workout < ActiveRecord::Base
   CARDIO_WORKOUTS = ["Cardio Training"]
   
   
-  def choose_model
-    if STRENGTH_WORKOUTS.include? self.template == "Anatomical Adaptation"
+  protected
+  
+  def self.strength_workouts
+    STRENGTH_WORKOUTS
   end
   
 end

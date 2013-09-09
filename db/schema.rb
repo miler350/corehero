@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130909011825) do
+ActiveRecord::Schema.define(version: 20130909014305) do
 
   create_table "issuances", force: true do |t|
     t.integer  "user_id"
@@ -334,7 +334,10 @@ ActiveRecord::Schema.define(version: 20130909011825) do
     t.integer  "saturday_exercise_ten_sets"
     t.string   "saturday_exercise_ten_tempo",    limit: 12
     t.string   "saturday_exercise_ten_rest",     limit: 6
+    t.integer  "workout_id"
   end
+
+  add_index "strengthworkouts", ["workout_id"], name: "index_strengthworkouts_on_workout_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "",    null: false

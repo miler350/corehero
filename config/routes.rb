@@ -1,4 +1,5 @@
 CoreheroFirst::Application.routes.draw do
+  resources :workouts
 
   devise_for :users do
     get "/users/sign_out" => "devise/sessions#destroy"

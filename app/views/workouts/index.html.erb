@@ -1,0 +1,6 @@
+<h3> ALL WORKOUTS </h3>
+
+<% @workouts.each do |workout| %>
+<div>
+<%= "  DATE: #{workout.start_date} ---->  #{workout.template} ----> #{workout.users[0].email} " %></div>
+<% end %>
