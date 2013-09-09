@@ -743,8 +743,16 @@
 		 								            </div><!-- Select Basic --><%# ------------------------ END SATURDAY WEIGHT TRAINING DIV ----------------------------------%>
 		 											</div><!-- End #saturday / -->
 													
-										 <%# ---------------------------------------------------- END FULL WEEK ----------------------------------------------------------------%>			
-                         
+										 <%# ---------------------------------------------------- END FULL WEEK ----------------------------------------------------------------%>		
+										 <% if request.path != new_workout_path %>
+										 <% if request.path == edit_strengthworkout_path %>	
+		                                 <div class="span2">
+		                                     <div class="btn-group">
+		 										<%= f.submit "Customize", :class => "btn btn-large btn-warning"  %>
+												<% end %>
+												<% end %>
+                                      
+		                                     </div>
 							                           
 													   
 													   
