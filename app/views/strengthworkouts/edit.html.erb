@@ -1,3 +1,4 @@
+
 <div id="section_header" style="min-height: 0;">
     <div class="container">
         <div class="row">
@@ -5,5 +6,5 @@
                     <h5 class="blue">TRAINER TOOLS</h5>
                     <h3>Customize the <%= @workout.template %> for <%= User.find(@workout.user_ids[0]).email %></h3>
                 </div>  
-				
-				<%= render partial: 'strengthworkout' %>
+				<%= render partial: 'formatting' %>
+				<%= render partial: 'workouts/strengthworkout' %>

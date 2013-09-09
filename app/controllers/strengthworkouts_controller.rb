@@ -4,35 +4,24 @@ class StrengthworkoutsController < ApplicationController
     @strengthworkouts = current_user.workouts
   end
 
-  def new
-    @strengthworkout = Workout.new
-  end
-
-  def create
-    @strengthworkout = Workout.new(workout_params)
-    if @strengthworkout.save
-      redirect_to edit_workout_path(@strengthworkout), notice: "Workout created."
-    else
-      render 'new'
-    end
-  end
-
+ 
   def show
     @strengthworkout = Workout.find(params[:id])
   end
   
   def edit
-    @strengthworkout = Workout.find(params[:id])
+    @strengthworkout = Strengthworkout.find(params[:id])
+    @workout = Workout.find(@strengthworkout.workout_id)
   end
   
-  def update
-    @strengthworkout = Workout.find(params[:id])
-    if @strengthworkout.update_attributes(workout_params)
-      redirect_to workouts_path, notice: "Template customized."
-    else
-      render 'update'
-    end
-  end
+ #TODO def update
+  #  @strengthworkout = Workout.find(params[:id])
+   # if @strengthworkout.update_attributes(workout_params)
+    #  redirect_to workouts_path, notice: "Template customized."
+    #else
+     # render 'update'
+    #end
+    #end
   
   def destroy
     

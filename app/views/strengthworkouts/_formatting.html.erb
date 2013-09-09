@@ -1,0 +1,71 @@
+					<div class="wo_main_dd">
+                        <div class="row">
+                                <div class="span3">
+                                    <div class="btn-group">
+										<%#= f.collection_select :user_ids, User.all, :id, :email, {}, { :multiple => true } %>
+                                          <!-- <button id="client_name" class="btn btn-large btn-info">Select a client...</button>
+                                          <button class="btn btn-large btn-info dropdown-toggle" data-toggle="dropdown">
+											
+                                            <span class="caret"></span>
+                                          </button>
+                                           <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">-->
+                                            <!-- dropdown menu links -->
+                                           
+                                          </ul>
+                                    </div>
+                                </div><!-- .span3/ -->
+                                <div class="span4">
+                                    <div class="btn-group">
+										<%#= f.select :template, [["Anatomical Adaptation"], ["Hypertrophy"], ['Maximum Strength'], ['Weight Loss'],['Circuit Training']], {}%>
+                                          <!-- <button id="workout_type" class="btn btn-large btn-info">Choose a workout type...</button>
+                                          <button class="btn btn-large btn-info dropdown-toggle" data-toggle="dropdown">
+                                            <span class="caret"></span>
+                                          </button>-->
+                                           <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                            <!-- dropdown menu links -->
+                                            <li><a tabindex="-1" href="#">Anatomical Adaptation</a></li>
+                                            <li><a tabindex="-1" href="#">Hypertrophy</a></li>
+                                            <li><a tabindex="-1" href="#">Maximum Strength</a></li>
+                                                <li class="divider"></li>
+                                            <li><a tabindex="-1" href="#">Weight Loss</a></li>
+                                            <li><a tabindex="-1" href="#">Cardio Strength</a></li>
+                                            <li><a tabindex="-1" href="#">Circuit Training</a></li>
+                                                <li class="divider"></li>
+                                            <li><a tabindex="-1" href="#">Split Routine</a></li>
+                                            <li><a tabindex="-1" href="#">Circuit Training</a></li>
+                                                <li class="divider"></li>
+                                            <li><a tabindex="-1" href="#">Core Training</a></li>
+                                            <li><a tabindex="-1" href="#">Flexibility Training</a></li>
+                                          </ul>
+                                    </div>
+                                </div><!-- .span4/ -->
+                                <div class="span3 start_date">
+									<%#= f.date_select :start_date, 'data-behaviour' => 'datepicker'%>
+                                    <!-- <input id="textinput" name="textinput" type="date">-->
+                                    <h5>Start Date</h5>
+                                </div>
+                                <div class="span2">
+                                    <div class="btn-group">
+										<%#= f.submit "Create", :class => "btn btn-large btn-warning"  %>
+                                      
+                                    </div>
+                                </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="weekly_workout" class="create_workout" style="padding-top: 20px;">
+    <div class="container">
+        <div class="row">
+                  <form>
+                    <fieldset>
+                    <!-- Form Name -->
+					
+					<%#= render partial: 'workout', :locals => { :f => f } %>
+					<%# end %>
+					

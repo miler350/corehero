@@ -1,0 +1,760 @@
+<%= form_for [@strengthworkout] do |f| %>
+<div id="weekly_workout" class="create_workout" style="padding-top: 20px;">
+    <div class="container">
+        <div class="row">
+                  <form>
+                    <fieldset>
+                    <!-- Form Name -->
+					<%#= form_for @workout do |f| %>
+					<%= render partial: 'workouts/title_of_workout', :locals => { :f => f } %>
+						
+						               <%# ------------------------ BEGIN MONDAY WORKOUT ----------------------------------%>
+                                                   <div id="monday" class="wo_day">
+                                                   <h4>Monday</h4>
+                                                   <div class="control-group">
+                                                   <div class="controls">
+                                                   <h5>Describe this workout...</h5>
+												   <%= f.text_field :monday_workout_description, type: "text", placeholder: "", class: "span3" %>
+                                                   </div>
+                                                   </div>
+								
+								        <!-- Select Basic --><%# ------------------------ BEGIN MONDAY WEIGHT TRAINING DIV ----------------------------------%>
+                                                   <div class="weight_training">
+                                                   <h5>Enter strength training exercises...</h5>
+								
+                                        <!-- Select Basic --><%# ------------------------ BEGIN ROW 1 ----------------------------------%>
+                                                   <div class="row">
+								        <!-- Select Basic --><%# ------------------------ BEGIN MONDAY EXERCISE 1 ----------------------------------%>	
+                                                   <%# open DIV 1 %><div class="control-group span3">
+                                                   <%# open DIV 2 %><div class="controls">
+												   <%= f.text_field :monday_exercise_one_name, type: "text", style: "margin: 0 auto;", class: "controls" %> </div> <%# close DIV 2 %>
+                                                   <%# open DIV 3 %><div class="row">
+                                                   <%# open DIV 4 %><div class="controls exercise_inputs span3">
+												   <%= f.text_field :monday_exercise_one_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+                                                   <%= f.text_field :monday_exercise_one_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+												   <%= f.text_field :monday_exercise_one_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+												   <%= f.text_field :monday_exercise_one_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+                                                   <%# close DIV 4 %></div><%# close DIV 3 %></div><%# close DIV 1 %></div>
+												   
+												   
+                                        <!-- Select Basic --><%# ------------------------ BEGIN MONDAY EXERCISE 2 ----------------------------------%>
+                                                   <%# open DIV 1 %><div class="control-group span3">
+                                                   <%# open DIV 2 %><div class="controls">
+												   <%= f.text_field :monday_exercise_two_name, type: "text", style: "margin: 0 auto;", class: "controls" %></div> <%# close DIV 2 %>
+												   <%# open DIV 3 %><div class="row">
+												   <%# open DIV 4 %><div class="controls exercise_inputs span3">
+												   <%= f.text_field :monday_exercise_two_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+                                                   <%= f.text_field :monday_exercise_two_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+												   <%= f.text_field :monday_exercise_two_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+												   <%= f.text_field :monday_exercise_two_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+											       <%# close DIV 4 %></div><%# close DIV 3 %></div><%# close DIV 1 %></div>
+												  
+                                       <!-- Select Basic --><%# ------------------------ BEGIN MONDAY EXERCISE 3 ----------------------------------%>
+                                                   <%# open DIV 1 %><div class="control-group span3">
+                                                   <%# open DIV 2 %><div class="controls">
+                                                   <%= f.text_field :monday_exercise_three_name, type: "text", style: "margin: 0 auto;", class: "controls" %></div> <%# close DIV 2 %>
+                                                   <%# open DIV 3 %><div class="row">
+                                                   <%# open DIV 4 %><div class="controls exercise_inputs span3">
+												   <%= f.text_field :monday_exercise_three_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+                                                   <%= f.text_field :monday_exercise_three_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+												   <%= f.text_field :monday_exercise_three_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+												   <%= f.text_field :monday_exercise_three_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+											       <%# close DIV 4 %></div><%# close DIV 3 %></div><%# close DIV 1 %></div>
+												   
+												   
+                                        <!-- Select Basic --><%# ------------------------ BEGIN MONDAY EXERCISE 4 ----------------------------------%>
+                                                  <%# open DIV 1 %><div class="control-group span3">
+                                                  <%# open DIV 2 %><div class="controls">
+                                                  <%= f.text_field :monday_exercise_four_name, type: "text", style: "margin: 0 auto;", class: "controls" %></div> <%# close DIV 2 %>
+                                                  <%# open DIV 3 %><div class="row">
+                                                  <%# open DIV 4 %><div class="controls exercise_inputs span3">
+											      <%= f.text_field :monday_exercise_four_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+                                                  <%= f.text_field :monday_exercise_four_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+											      <%= f.text_field :monday_exercise_four_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+											      <%= f.text_field :monday_exercise_four_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+                                                  <%# close DIV 4 %></div><%# close DIV 3 %></div><%# close DIV 1 %></div>
+											      </div><%# ------------------------ END ROW 1 ----------------------------------%>
+												  
+												  
+                                      
+                                        <!-- Select Basic --><%# ------------------------ BEGIN ROW 2 ----------------------------------%>
+                                                  <div class="row">
+								        <!-- Select Basic --><%# ------------------------ BEGIN MONDAY EXERCISE 5 ----------------------------------%>
+                                                  <%# open DIV 1 %><div class="control-group span3">
+                                                  <%# open DIV 2 %><div class="controls">
+                                                  <%= f.text_field :monday_exercise_five_name, type: "text", style: "margin: 0 auto;", class: "controls" %></div> <%# close DIV 2 %>
+                                                  <%# open DIV 3 %><div class="row">
+                                                  <%# open DIV 4 %><div class="controls exercise_inputs span3">
+											      <%= f.text_field :monday_exercise_five_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+                                                  <%= f.text_field :monday_exercise_five_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+											      <%= f.text_field :monday_exercise_five_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+											      <%= f.text_field :monday_exercise_five_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+                                                  <%# close DIV 4 %></div><%# close DIV 3 %></div><%# close DIV 1 %></div>
+											   
+											   
+                                        <!-- Select Basic --><%# ------------------------ BEGIN MONDAY EXERCISE 6 ----------------------------------%>
+                                                <%# open DIV 1 %><div class="control-group span3">
+                                                <%# open DIV 2 %><div class="controls">
+                                                <%= f.text_field :monday_exercise_six_name, type: "text", style: "margin: 0 auto;", class: "controls" %></div> <%# close DIV 2 %>
+                                                <%# open DIV 3 %><div class="row">
+                                                <%# open DIV 4 %><div class="controls exercise_inputs span3">
+											    <%= f.text_field :monday_exercise_six_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+                                                <%= f.text_field :monday_exercise_six_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+											    <%= f.text_field :monday_exercise_six_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+											    <%= f.text_field :monday_exercise_six_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+                                                <%# close DIV 4 %></div><%# close DIV 3 %></div><%# close DIV 1 %></div>
+                                           
+										   
+                                        <!-- Select Basic --><%# ------------------------ BEGIN MONDAY EXERCISE 7 ----------------------------------%>
+                                                <%# open DIV 1 %><div class="control-group span3">
+                                                <%# open DIV 2 %><div class="controls">
+                                                <%= f.text_field :monday_exercise_seven_name, type: "text", style: "margin: 0 auto;", class: "controls" %></div> <%# close DIV 2 %>
+                                                <%# open DIV 3 %><div class="row">
+                                                <%# open DIV 4 %><div class="controls exercise_inputs span3">
+											    <%= f.text_field :monday_exercise_seven_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+                                                <%= f.text_field :monday_exercise_seven_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+											    <%= f.text_field :monday_exercise_seven_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+											    <%= f.text_field :monday_exercise_seven_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+                                                <%# close DIV 4 %></div><%# close DIV 3 %></div><%# close DIV 1 %></div>
+                                         
+										 
+                                        <!-- Select Basic --><%# ------------------------ BEGIN MONDAY EXERCISE 8 ----------------------------------%>
+                                               <%# open DIV 1 %><div class="control-group span3">
+                                               <%# open DIV 2 %><div class="controls">
+                                               <%= f.text_field :monday_exercise_eight_name, type: "text", style: "margin: 0 auto;", class: "controls" %></div> <%# close DIV 2 %>
+                                               <%# open DIV 3 %><div class="row">
+                                               <%# open DIV 4 %><div class="controls exercise_inputs span3">
+											   <%= f.text_field :monday_exercise_eight_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+                                               <%= f.text_field :monday_exercise_eight_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+											   <%= f.text_field :monday_exercise_eight_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+											   <%= f.text_field :monday_exercise_eight_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+                                               <%# close DIV 4 %></div><%# close DIV 3 %></div><%# close DIV 1 %></div> 
+                                               </div><%# ------------------------ END ROW 2 ----------------------------------%>
+                                               </div><!-- Select Basic --><%# ------------------------ BEGIN MONDAY WEIGHT TRAINING DIV ----------------------------------%>
+										       </div><!-- End #monday / -->
+											   
+											   
+											   
+											   
+											   
+							           <%# ------------------------ BEGIN TUESDAY WORKOUT ----------------------------------%>
+                                               <div id="tuesday" class="wo_day">
+                                               <h4>Tuesday</h4>
+                                               <div class="control-group">
+                                               <div class="controls">
+                                               <h5>Describe this workout...</h5>
+											   <%= f.text_field :tuesday_workout_description, type: "text", placeholder: "", class: "span4 input-xlarge" %>
+                                               </div>
+                                               </div>
+											   
+										<!-- Select Basic --><%# ------------------------ BEGIN MONDAY WEIGHT TRAINING DIV ----------------------------------%>	   
+                                               <div class="weight_training">
+                                               <h5>Enter strength training exercises...</h5>
+											   
+                                        <!-- Select Basic --><%# ------------------------ BEGIN ROW 3 ----------------------------------%>
+                                               <div class="row">
+									    <!-- Select Basic --><%# ------------------------ BEGIN TUESDAY EXERCISE 1 ----------------------------------%>
+                                               <%# open DIV 1 %><div class="control-group span3">
+                                               <%# open DIV 2 %><div class="controls">
+                                               <%= f.text_field :tuesday_exercise_one_name, type: "text", style: "margin: 0 auto;", class: "controls" %> </div> <%# close DIV 2 %>
+                                               <%# open DIV 3 %><div class="controls exercise_inputs">
+ 											   <%= f.text_field :tuesday_exercise_one_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+                                               <%= f.text_field :tuesday_exercise_one_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+ 											   <%= f.text_field :tuesday_exercise_one_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+ 											   <%= f.text_field :tuesday_exercise_one_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+                                               <%# close DIV 3 %></div><%# close DIV 1 %></div><%# close DIV 1 %>
+												
+												
+									    <!-- Select Basic --><%# ------------------------ BEGIN TUESDAY EXERCISE 2 ----------------------------------%>
+                                               <%# open DIV 1 %><div class="control-group span3">
+                                               <%# open DIV 2 %><div class="controls">
+                                               <%= f.text_field :tuesday_exercise_two_name, type: "text", style: "margin: 0 auto;", class: "controls" %> </div> <%# close DIV 2 %>
+                                               <%# open DIV 3 %><div class="controls exercise_inputs">
+ 											   <%= f.text_field :tuesday_exercise_two_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+                                               <%= f.text_field :tuesday_exercise_two_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+ 											   <%= f.text_field :tuesday_exercise_two_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+ 											   <%= f.text_field :tuesday_exercise_two_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+                                               <%# close DIV 3 %></div><%# close DIV 1 %></div><%# close DIV 1 %>
+                                                
+												
+   										<!-- Select Basic --><%# ------------------------ BEGIN TUESDAY EXERCISE 3 ----------------------------------%>
+                                               <%# open DIV 1 %><div class="control-group span3">
+                                               <%# open DIV 2 %><div class="controls">
+                                               <%= f.text_field :tuesday_exercise_three_name, type: "text", style: "margin: 0 auto;", class: "controls" %> </div> <%# close DIV 2 %>
+                                               <%# open DIV 3 %><div class="controls exercise_inputs">
+   	 										   <%= f.text_field :tuesday_exercise_three_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+   	                                           <%= f.text_field :tuesday_exercise_three_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+   	 										   <%= f.text_field :tuesday_exercise_three_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+   	 										   <%= f.text_field :tuesday_exercise_three_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+                                               <%# close DIV 3 %></div><%# close DIV 1 %></div><%# close DIV 1 %>
+												
+                                             
+   								        <!-- Select Basic --><%# ------------------------ BEGIN TUESDAY EXERCISE 4 ----------------------------------%>
+                                               <%# open DIV 1 %><div class="control-group span3">
+                                               <%# open DIV 2 %><div class="controls">
+                                               <%= f.text_field :tuesday_exercise_four_name, type: "text", style: "margin: 0 auto;", class: "controls" %> </div> <%# close DIV 2 %>
+                                               <%# open DIV 3 %><div class="controls exercise_inputs">
+   	 										   <%= f.text_field :tuesday_exercise_four_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+   	                                           <%= f.text_field :tuesday_exercise_four_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+   	 										   <%= f.text_field :tuesday_exercise_four_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+   	 										   <%= f.text_field :tuesday_exercise_four_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+                                               <%# close DIV 3 %></div><%# close DIV 1 %></div><%# close DIV 1 %>
+										       </div><%# ------------------------ END ROW 3 ----------------------------------%>
+											   
+                                        <!-- Select Basic --><%# ------------------------ BEGIN ROW 4 ----------------------------------%>
+                                               <div class="row">
+												   
+	   								    <!-- Select Basic --><%# ------------------------ BEGIN TUESDAY EXERCISE 5 ----------------------------------%>
+	                                            <%# open DIV 1 %><div class="control-group span3">
+	                                            <%# open DIV 2 %><div class="controls">
+	                                            <%= f.text_field :tuesday_exercise_five_name, type: "text", style: "margin: 0 auto;", class: "controls" %> </div> <%# close DIV 2 %>
+	                                            <%# open DIV 3 %><div class="controls exercise_inputs">
+	   	 									    <%= f.text_field :tuesday_exercise_five_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+	   	                                        <%= f.text_field :tuesday_exercise_five_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+	   	 									    <%= f.text_field :tuesday_exercise_five_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+	   	 									    <%= f.text_field :tuesday_exercise_five_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+	                                            <%# close DIV 3 %></div><%# close DIV 1 %></div><%# close DIV 1 %>
+												
+												
+	   								    <!-- Select Basic --><%# ------------------------ BEGIN TUESDAY EXERCISE 6 ----------------------------------%>
+	                                            <%# open DIV 1 %><div class="control-group span3">
+	                                            <%# open DIV 2 %><div class="controls">
+	                                            <%= f.text_field :tuesday_exercise_six_name, type: "text", style: "margin: 0 auto;", class: "controls" %> </div> <%# close DIV 2 %>
+	                                            <%# open DIV 3 %><div class="controls exercise_inputs">
+	   	 									    <%= f.text_field :tuesday_exercise_six_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+	   	                                        <%= f.text_field :tuesday_exercise_six_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+	   	 									    <%= f.text_field :tuesday_exercise_six_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+	   	 									    <%= f.text_field :tuesday_exercise_six_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+	                                            <%# close DIV 3 %></div><%# close DIV 1 %></div><%# close DIV 1 %>
+                                                
+												
+		   								<!-- Select Basic --><%# ------------------------ BEGIN TUESDAY EXERCISE 7 ----------------------------------%>
+		                                        <%# open DIV 1 %><div class="control-group span3">
+		                                        <%# open DIV 2 %><div class="controls">
+		                                        <%= f.text_field :tuesday_exercise_seven_name, type: "text", style: "margin: 0 auto;", class: "controls" %> </div> <%# close DIV 2 %>
+		                                        <%# open DIV 3 %><div class="controls exercise_inputs">
+		   	 									<%= f.text_field :tuesday_exercise_seven_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+		   	                                    <%= f.text_field :tuesday_exercise_seven_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+		   	 									<%= f.text_field :tuesday_exercise_seven_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+		   	 									<%= f.text_field :tuesday_exercise_seven_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+		                                        <%# close DIV 3 %></div><%# close DIV 1 %></div><%# close DIV 1 %>
+												
+												
+												
+												
+			   						    <!-- Select Basic --><%# ------------------------ BEGIN TUESDAY EXERCISE 8 ----------------------------------%>
+			                                    <%# open DIV 1 %><div class="control-group span3">
+			                                    <%# open DIV 2 %><div class="controls">
+			                                    <%= f.text_field :tuesday_exercise_eight_name, type: "text", style: "margin: 0 auto;", class: "controls" %> </div> <%# close DIV 2 %>
+			                                    <%# open DIV 3 %><div class="controls exercise_inputs">
+			   	 							    <%= f.text_field :tuesday_exercise_eight_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+			   	                                <%= f.text_field :tuesday_exercise_eight_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+			   	 							    <%= f.text_field :tuesday_exercise_eight_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+			   	 							    <%= f.text_field :tuesday_exercise_eight_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+			                                    <%# close DIV 3 %></div><%# close DIV 1 %></div><%# close DIV 1 %>
+                                                </div><%# ------------------------ END ROW 4 ----------------------------------%>
+                                                </div><!-- Select Basic --><%# ------------------------ END TUESDAY WEIGHT TRAINING DIV ----------------------------------%>
+									            </div><!-- End #tueday / -->
+												
+						
+						                <%# ------------------------ BEGIN WEDNESDAY WORKOUT ----------------------------------%> 
+										        <div id="wednesday" class="wo_day">
+                                                <h4>Wednesday</h4>
+                                                <div class="control-group">
+                                                <div class="controls">
+                                                <h5>Describe this workout...</h5>
+												<%= f.text_field :wednesday_workout_description, type: "text", placeholder: "", class: "span4" %>
+                                                </div>
+                                                </div>
+												
+									    <!-- Select Basic --><%# ------------------------ BEGIN WEDNESDAY WEIGHT TRAINING DIV ----------------------------------%>	   
+	                                            <div class="weight_training">
+	                                            <h5>Enter strength training exercises...</h5>
+										
+		                                <!-- Select Basic --><%# ------------------------ BEGIN ROW 5 ----------------------------------%>
+		                                        <div class="row">
+                                  
+										<!-- Select Basic --><%# ------------------------ BEGIN WEDNESDAY EXERCISE 1 ----------------------------------%>
+		                                          <%# open DIV 1 %><div class="control-group span3">
+		                                          <%# open DIV 2 %><div class="controls">
+		                                          <%= f.text_field :wednesday_exercise_one_name, type: "text", style: "margin: 0 auto;", class: "controls" %> </div> <%# close DIV 2 %>
+		                                          <%# open DIV 3 %><div class="controls exercise_inputs">
+			 									  <%= f.text_field :wednesday_exercise_one_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+			                                      <%= f.text_field :wednesday_exercise_one_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+			 									  <%= f.text_field :wednesday_exercise_one_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+			 								      <%= f.text_field :wednesday_exercise_one_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+		                                          <%# close DIV 3 %></div><%# close DIV 1 %></div><%# close DIV 1 %>
+                                            
+	  								    <!-- Select Basic --><%# ------------------------ BEGIN WEDNESDAY EXERCISE 2 ----------------------------------%>
+	                                              <%# open DIV 1 %><div class="control-group span3">
+	                                              <%# open DIV 2 %><div class="controls">
+	                                              <%= f.text_field :wednesday_exercise_two_name, type: "text", style: "margin: 0 auto;", class: "controls" %> </div> <%# close DIV 2 %>
+	                                              <%# open DIV 3 %><div class="controls exercise_inputs">
+	  	 										  <%= f.text_field :wednesday_exercise_two_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+	  	                                          <%= f.text_field :wednesday_exercise_two_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+	  	 										  <%= f.text_field :wednesday_exercise_two_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+	  	 										  <%= f.text_field :wednesday_exercise_two_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+	                                              <%# close DIV 3 %></div><%# close DIV 1 %></div><%# close DIV 1 %>
+                                                
+												
+	  	   								<!-- Select Basic --><%# ------------------------ BEGIN WEDNESDAY EXERCISE 3 ----------------------------------%>
+	  	                                          <%# open DIV 1 %><div class="control-group span3">
+	  	                                          <%# open DIV 2 %><div class="controls">
+	  	                                          <%= f.text_field :wednesday_exercise_three_name, type: "text", style: "margin: 0 auto;", class: "controls" %> </div> <%# close DIV 2 %>
+	  	                                          <%# open DIV 3 %><div class="controls exercise_inputs">
+	  	   	 									  <%= f.text_field :wednesday_exercise_three_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+	  	   	                                      <%= f.text_field :wednesday_exercise_three_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+	  	   	 					        		  <%= f.text_field :wednesday_exercise_three_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+	  	   	 								      <%= f.text_field :wednesday_exercise_three_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+	  	                                          <%# close DIV 3 %></div><%# close DIV 1 %></div><%# close DIV 1 %>
+												
+                                             
+	     	   							<!-- Select Basic --><%# ------------------------ BEGIN WEDNESDAY EXERCISE 4 ----------------------------------%>
+	     	                                      <%# open DIV 1 %><div class="control-group span3">
+	     	                                      <%# open DIV 2 %><div class="controls">
+	     	                                      <%= f.text_field :wednesday_exercise_four_name, type: "text", style: "margin: 0 auto;", class: "controls" %> </div> <%# close DIV 2 %>
+	     	                                      <%# open DIV 3 %><div class="controls exercise_inputs">
+	     	   	 							      <%= f.text_field :wednesday_exercise_four_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+	     	   	                                  <%= f.text_field :wednesday_exercise_four_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+	     	   	 								  <%= f.text_field :wednesday_exercise_four_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+	     	   	 								  <%= f.text_field :wednesday_exercise_four_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+	     	                                      <%# close DIV 3 %></div><%# close DIV 1 %></div><%# close DIV 1 %>
+	  											  </div><%# ------------------------ END ROW 5 ----------------------------------%>
+											   
+											   
+	  	                                <!-- Select Basic --><%# ------------------------ BEGIN ROW 6 ----------------------------------%>
+	  	                                          <div class="row">
+												   
+	  		   						    <!-- Select Basic --><%# ------------------------ BEGIN WEDNESDAY EXERCISE 5 ----------------------------------%>
+	  		                                      <%# open DIV 1 %><div class="control-group span3">
+	  		                                      <%# open DIV 2 %><div class="controls">
+	  		                                      <%= f.text_field :wednesday_exercise_five_name, type: "text", style: "margin: 0 auto;", class: "controls" %> </div> <%# close DIV 2 %>
+	  		                                      <%# open DIV 3 %><div class="controls exercise_inputs">
+	  		   	 								  <%= f.text_field :wednesday_exercise_five_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+	  		   	                                  <%= f.text_field :wednesday_exercise_five_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+	  		   	 								  <%= f.text_field :wednesday_exercise_five_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+	  		   	 								  <%= f.text_field :wednesday_exercise_five_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+	  		                                      <%# close DIV 3 %></div><%# close DIV 1 %></div><%# close DIV 1 %>
+												
+												
+	  		   							<!-- Select Basic --><%# ------------------------ BEGIN WEDNESDAY EXERCISE 6 ----------------------------------%>
+	  		                                      <%# open DIV 1 %><div class="control-group span3">
+	  		                                      <%# open DIV 2 %><div class="controls">
+	  		                                      <%= f.text_field :wednesday_exercise_six_name, type: "text", style: "margin: 0 auto;", class: "controls" %> </div> <%# close DIV 2 %>
+	  		                                      <%# open DIV 3 %><div class="controls exercise_inputs">
+	  		   	 								  <%= f.text_field :wednesday_exercise_six_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+	  		   	                                  <%= f.text_field :wednesday_exercise_six_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+	  		   	 								  <%= f.text_field :wednesday_exercise_six_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+	  		   	 								  <%= f.text_field :wednesday_exercise_six_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+	  		                                      <%# close DIV 3 %></div><%# close DIV 1 %></div><%# close DIV 1 %>
+                                                
+												
+	  			   						<!-- Select Basic --><%# ------------------------ BEGIN WEDNESDAY EXERCISE 7 ----------------------------------%>
+	  			                                  <%# open DIV 1 %><div class="control-group span3">
+	  			                                  <%# open DIV 2 %><div class="controls">
+	  			                                  <%= f.text_field :wednesday_exercise_seven_name, type: "text", style: "margin: 0 auto;", class: "controls" %> </div> <%# close DIV 2 %>
+	  			                                  <%# open DIV 3 %><div class="controls exercise_inputs">
+	  			   	 						      <%= f.text_field :wednesday_exercise_seven_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+	  			   	                              <%= f.text_field :wednesday_exercise_seven_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+	  			   	 							  <%= f.text_field :wednesday_exercise_seven_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+	  			   	 						      <%= f.text_field :wednesday_exercise_seven_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+	  			                                  <%# close DIV 3 %></div><%# close DIV 1 %></div><%# close DIV 1 %>
+												
+												
+												
+												
+	  				   					<!-- Select Basic --><%# ------------------------ BEGIN WEDNESDAY EXERCISE 8 ----------------------------------%>
+	  				                              <%# open DIV 1 %><div class="control-group span3">
+	  				                              <%# open DIV 2 %><div class="controls">
+	  				                              <%= f.text_field :wednesday_exercise_eight_name, type: "text", style: "margin: 0 auto;", class: "controls" %> </div> <%# close DIV 2 %>
+	  				                              <%# open DIV 3 %><div class="controls exercise_inputs">
+	  				   	 						  <%= f.text_field :wednesday_exercise_eight_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+	  				   	                          <%= f.text_field :wednesday_exercise_eight_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+	  				   	 						  <%= f.text_field :wednesday_exercise_eight_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+	  				   	 						  <%= f.text_field :wednesday_exercise_eight_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+                                                  <%# close DIV 3 %></div><%# close DIV 1 %></div><%# close DIV 1 %>
+                                                  </div><%# ------------------------ END ROW 6 ----------------------------------%>
+                                                  </div><!-- Select Basic --><%# ------------------------ END WEDNESDAY WEIGHT TRAINING DIV ----------------------------------%>
+								                  </div><!-- End #wednesday / -->
+												  
+												  
+												  
+												  
+	  							        <%# ------------------------ BEGIN THURSDAY WORKOUT ----------------------------------%> 
+	  											  <div id="thursday" class="wo_day">
+	                                              <h4>Thursday</h4>
+	                                              <div class="control-group">
+	                                              <div class="controls">
+	                                              <h5>Describe this workout...</h5>
+	                                              <%= f.text_field :thursday_workout_description, type: "text", placeholder: "", class: "span4" %>
+	                                              </div>
+	                                              </div>
+												
+	  								    <!-- Select Basic --><%# ------------------------ BEGIN THURSDAY WEIGHT TRAINING DIV ----------------------------------%>	   
+	  		                                       <div class="weight_training">
+	  		                                       <h5>Enter strength training exercises...</h5>
+										
+	  			                        <!-- Select Basic --><%# ------------------------ BEGIN ROW 7 ----------------------------------%>
+	  			                                    <div class="row">
+										
+										
+										<!-- Select Basic --><%# ------------------------ BEGIN THURSDAY EXERCISE 1 ----------------------------------%>
+							                        <%# open DIV 1 %><div class="control-group span3">
+							                        <%# open DIV 2 %><div class="controls">
+							                        <%= f.text_field :thursday_exercise_one_name, type: "text", style: "margin: 0 auto;", class: "controls" %> </div> <%# close DIV 2 %>
+							                        <%# open DIV 3 %><div class="controls exercise_inputs">
+								 					<%= f.text_field :thursday_exercise_one_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+								                    <%= f.text_field :thursday_exercise_one_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+								 					<%= f.text_field :thursday_exercise_one_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+								 					<%= f.text_field :thursday_exercise_one_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+							                        <%# close DIV 3 %></div><%# close DIV 1 %></div><%# close DIV 1 %>
+                                            
+						  				<!-- Select Basic --><%# ------------------------ BEGIN THURSDAY EXERCISE 2 ----------------------------------%>
+						                            <%# open DIV 1 %><div class="control-group span3">
+						                            <%# open DIV 2 %><div class="controls">
+						                            <%= f.text_field :thursday_exercise_two_name, type: "text", style: "margin: 0 auto;", class: "controls" %> </div> <%# close DIV 2 %>
+						                            <%# open DIV 3 %><div class="controls exercise_inputs">
+						  	 						<%= f.text_field :thursday_exercise_two_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+						  	                        <%= f.text_field :thursday_exercise_two_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+						  	 						<%= f.text_field :thursday_exercise_two_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+						  	 						<%= f.text_field :thursday_exercise_two_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+						                            <%# close DIV 3 %></div><%# close DIV 1 %></div><%# close DIV 1 %>
+                                                
+												
+						  	   			<!-- Select Basic --><%# ------------------------ BEGIN THURSDAY EXERCISE 3 ----------------------------------%>
+						  	                        <%# open DIV 1 %><div class="control-group span3">
+						  	                        <%# open DIV 2 %><div class="controls">
+						  	                        <%= f.text_field :thursday_exercise_three_name, type: "text", style: "margin: 0 auto;", class: "controls" %> </div> <%# close DIV 2 %>
+						  	                        <%# open DIV 3 %><div class="controls exercise_inputs">
+						  	   	 					<%= f.text_field :thursday_exercise_three_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+						  	   	                    <%= f.text_field :thursday_exercise_three_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+						  	   	 					<%= f.text_field :thursday_exercise_three_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+						  	   	 					<%= f.text_field :thursday_exercise_three_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+						  	                        <%# close DIV 3 %></div><%# close DIV 1 %></div><%# close DIV 1 %>
+												
+                                             
+						     	   		<!-- Select Basic --><%# ------------------------ BEGIN THURSDAY EXERCISE 4 ----------------------------------%>
+						     	                    <%# open DIV 1 %><div class="control-group span3">
+						     	                    <%# open DIV 2 %><div class="controls">
+						     	                    <%= f.text_field :thursday_exercise_four_name, type: "text", style: "margin: 0 auto;", class: "controls" %> </div> <%# close DIV 2 %>
+						     	                    <%# open DIV 3 %><div class="controls exercise_inputs">
+						     	   	 				<%= f.text_field :thursday_exercise_four_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+						     	   	                <%= f.text_field :thursday_exercise_four_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+						     	   	 				<%= f.text_field :thursday_exercise_four_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+						     	   	 				<%= f.text_field :thursday_exercise_four_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+						     	                    <%# close DIV 3 %></div><%# close DIV 1 %></div><%# close DIV 1 %>
+						  							</div><%# ------------------------ END ROW 7 ----------------------------------%>
+											   
+											   
+						  	            <!-- Select Basic --><%# ------------------------ BEGIN ROW 8 ----------------------------------%>
+						  	                        <div class="row">
+												   
+						  		   		<!-- Select Basic --><%# ------------------------ BEGIN THURSDAY EXERCISE 5 ----------------------------------%>
+						  		                    <%# open DIV 1 %><div class="control-group span3">
+						  		                    <%# open DIV 2 %><div class="controls">
+						  		                    <%= f.text_field :thursday_exercise_five_name, type: "text", style: "margin: 0 auto;", class: "controls" %> </div> <%# close DIV 2 %>
+						  		                    <%# open DIV 3 %><div class="controls exercise_inputs">
+						  		   	 				<%= f.text_field :thursday_exercise_five_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+						  		   	                <%= f.text_field :thursday_exercise_five_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+						  		   	 				<%= f.text_field :thursday_exercise_five_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+						  		   	 				<%= f.text_field :thursday_exercise_five_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+						  		                    <%# close DIV 3 %></div><%# close DIV 1 %></div><%# close DIV 1 %>
+												
+												
+						  		   		<!-- Select Basic --><%# ------------------------ BEGIN THURSDAY EXERCISE 6 ----------------------------------%>
+						  		                    <%# open DIV 1 %><div class="control-group span3">
+						  		                    <%# open DIV 2 %><div class="controls">
+						  		                    <%= f.text_field :thursday_exercise_six_name, type: "text", style: "margin: 0 auto;", class: "controls" %> </div> <%# close DIV 2 %>
+						  		                    <%# open DIV 3 %><div class="controls exercise_inputs">
+						  		   	 				<%= f.text_field :thursday_exercise_six_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+						  		   	                <%= f.text_field :thursday_exercise_six_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+						  		   	 				<%= f.text_field :thursday_exercise_six_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+						  		   	 				<%= f.text_field :thursday_exercise_six_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+						  		                    <%# close DIV 3 %></div><%# close DIV 1 %></div><%# close DIV 1 %>
+                                                
+												
+						  			   	<!-- Select Basic --><%# ------------------------ BEGIN THURSDAY EXERCISE 7 ----------------------------------%>
+						  			                <%# open DIV 1 %><div class="control-group span3">
+						  			                <%# open DIV 2 %><div class="controls">
+						  			                <%= f.text_field :thursday_exercise_seven_name, type: "text", style: "margin: 0 auto;", class: "controls" %> </div> <%# close DIV 2 %>
+						  			                <%# open DIV 3 %><div class="controls exercise_inputs">
+						  			   	 			<%= f.text_field :thursday_exercise_seven_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+						  			   	            <%= f.text_field :thursday_exercise_seven_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+						  			   	 			<%= f.text_field :thursday_exercise_seven_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+						  			   	 			<%= f.text_field :thursday_exercise_seven_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+						  			                 <%# close DIV 3 %></div><%# close DIV 1 %></div><%# close DIV 1 %>
+												
+												
+												
+												
+						  				<!-- Select Basic --><%# ------------------------ BEGIN THURSDAY EXERCISE 8 ----------------------------------%>
+						  				            <%# open DIV 1 %><div class="control-group span3">
+						  				            <%# open DIV 2 %><div class="controls">
+						  				            <%= f.text_field :thursday_exercise_eight_name, type: "text", style: "margin: 0 auto;", class: "controls" %> </div> <%# close DIV 2 %>
+						  				            <%# open DIV 3 %><div class="controls exercise_inputs">
+						  				   	 		<%= f.text_field :thursday_exercise_eight_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+						  				   	        <%= f.text_field :thursday_exercise_eight_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+						  				   	 		<%= f.text_field :thursday_exercise_eight_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+						  				   	 		<%= f.text_field :thursday_exercise_eight_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+				                                    <%# close DIV 3 %></div><%# close DIV 1 %></div><%# close DIV 1 %>
+				                                    </div><%# ------------------------ END ROW 8 ----------------------------------%>
+				                                    </div><!-- Select Basic --><%# ------------------------ END THURSDAY WEIGHT TRAINING DIV ----------------------------------%>
+													</div><!-- End #thursday / -->
+                                          
+				  					    <%# ------------------------ BEGIN FRIDAY WORKOUT ----------------------------------%> 
+				  									<div id="friday" class="wo_day">
+				                                    <h4>Friday</h4>
+				                                    <div class="control-group">
+				                                    <div class="controls">
+				                                    <h5>Describe this workout...</h5>
+				                                    <%= f.text_field :friday_workout_description, type: "text", placeholder: "", class: "span4" %>
+				                                    </div>
+				                                    </div>
+												
+				  						<!-- Select Basic --><%# ------------------------ BEGIN FRIDAY WEIGHT TRAINING DIV ----------------------------------%>	   
+				  		                            <div class="weight_training">
+				  		                            <h5>Enter strength training exercises...</h5>
+										
+				  			            <!-- Select Basic --><%# ------------------------ BEGIN ROW 9 ----------------------------------%>
+				  			                        <div class="row">
+										
+										
+									    <!-- Select Basic --><%# ------------------------ BEGIN FRIDAY EXERCISE 1 ----------------------------------%>
+										            <%# open DIV 1 %><div class="control-group span3">
+										            <%# open DIV 2 %><div class="controls">
+										            <%= f.text_field :friday_exercise_one_name, type: "text", style: "margin: 0 auto;", class: "controls" %> </div> <%# close DIV 2 %>
+										            <%# open DIV 3 %><div class="controls exercise_inputs">
+											 		<%= f.text_field :friday_exercise_one_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+											        <%= f.text_field :friday_exercise_one_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+											 		<%= f.text_field :friday_exercise_one_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+											 		<%= f.text_field :friday_exercise_one_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+										            <%# close DIV 3 %></div><%# close DIV 1 %></div><%# close DIV 1 %>
+                                            
+									  	<!-- Select Basic --><%# ------------------------ BEGIN FRIDAY EXERCISE 2 ----------------------------------%>
+									                <%# open DIV 1 %><div class="control-group span3">
+									                <%# open DIV 2 %><div class="controls">
+									                <%= f.text_field :friday_exercise_two_name, type: "text", style: "margin: 0 auto;", class: "controls" %> </div> <%# close DIV 2 %>
+									                <%# open DIV 3 %><div class="controls exercise_inputs">
+									  	 			<%= f.text_field :friday_exercise_two_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+									  	            <%= f.text_field :friday_exercise_two_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+									  	 			<%= f.text_field :friday_exercise_two_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+									  	 			<%= f.text_field :friday_exercise_two_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+									                <%# close DIV 3 %></div><%# close DIV 1 %></div><%# close DIV 1 %>
+                                                
+												
+									  	<!-- Select Basic --><%# ------------------------ BEGIN FRIDAY EXERCISE 3 ----------------------------------%>
+									  	            <%# open DIV 1 %><div class="control-group span3">
+									  	            <%# open DIV 2 %><div class="controls">
+									  	            <%= f.text_field :friday_exercise_three_name, type: "text", style: "margin: 0 auto;", class: "controls" %> </div> <%# close DIV 2 %>
+									  	            <%# open DIV 3 %><div class="controls exercise_inputs">
+									  	   	 		<%= f.text_field :friday_exercise_three_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+									  	   	        <%= f.text_field :friday_exercise_three_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+									  	   	 		<%= f.text_field :friday_exercise_three_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+									  	   	 		<%= f.text_field :friday_exercise_three_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+									  	            <%# close DIV 3 %></div><%# close DIV 1 %></div><%# close DIV 1 %>
+												
+                                             
+									    <!-- Select Basic --><%# ------------------------ BEGIN FRIDAY EXERCISE 4 ----------------------------------%>
+									     	        <%# open DIV 1 %><div class="control-group span3">
+									     	        <%# open DIV 2 %><div class="controls">
+									     	        <%= f.text_field :friday_exercise_four_name, type: "text", style: "margin: 0 auto;", class: "controls" %> </div> <%# close DIV 2 %>
+									     	        <%# open DIV 3 %><div class="controls exercise_inputs">
+									     	   	 	<%= f.text_field :friday_exercise_four_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+									     	   	    <%= f.text_field :friday_exercise_four_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+									     	   	 	<%= f.text_field :friday_exercise_four_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+									     	   	 	<%= f.text_field :friday_exercise_four_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+									     	        <%# close DIV 3 %></div><%# close DIV 1 %></div><%# close DIV 1 %>
+									  				</div><%# ------------------------ END ROW 9 ----------------------------------%>
+											   
+											   
+									  	<!-- Select Basic --><%# ------------------------ BEGIN ROW 10 ----------------------------------%>
+									  	            <div class="row">
+												   
+									  	<!-- Select Basic --><%# ------------------------ BEGIN FRIDAY EXERCISE 5 ----------------------------------%>
+									  		        <%# open DIV 1 %><div class="control-group span3">
+									  		        <%# open DIV 2 %><div class="controls">
+									  		        <%= f.text_field :friday_exercise_five_name, type: "text", style: "margin: 0 auto;", class: "controls" %> </div> <%# close DIV 2 %>
+									  		        <%# open DIV 3 %><div class="controls exercise_inputs">
+									  		   	 	<%= f.text_field :friday_exercise_five_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+									  		   	    <%= f.text_field :friday_exercise_five_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+									  		   	 	<%= f.text_field :friday_exercise_five_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+									  		   	 	<%= f.text_field :friday_exercise_five_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+									  		        <%# close DIV 3 %></div><%# close DIV 1 %></div><%# close DIV 1 %>
+												
+												
+									    <!-- Select Basic --><%# ------------------------ BEGIN FRIDAY EXERCISE 6 ----------------------------------%>
+									  		        <%# open DIV 1 %><div class="control-group span3">
+									  		        <%# open DIV 2 %><div class="controls">
+									  		        <%= f.text_field :friday_exercise_six_name, type: "text", style: "margin: 0 auto;", class: "controls" %> </div> <%# close DIV 2 %>
+									  		        <%# open DIV 3 %><div class="controls exercise_inputs">
+									  		   	 	<%= f.text_field :friday_exercise_six_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+									  		   	    <%= f.text_field :friday_exercise_six_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+									  		   	 	<%= f.text_field :friday_exercise_six_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+									  		   	    <%= f.text_field :friday_exercise_six_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+									  		        <%# close DIV 3 %></div><%# close DIV 1 %></div><%# close DIV 1 %>
+                                                
+												
+									  	<!-- Select Basic --><%# ------------------------ BEGIN FRIDAY EXERCISE 7 ----------------------------------%>
+									  			    <%# open DIV 1 %><div class="control-group span3">
+									  			    <%# open DIV 2 %><div class="controls">
+									  			    <%= f.text_field :friday_exercise_seven_name, type: "text", style: "margin: 0 auto;", class: "controls" %> </div> <%# close DIV 2 %>
+									  			    <%# open DIV 3 %><div class="controls exercise_inputs">
+									  			   	<%= f.text_field :friday_exercise_seven_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+									  			   	<%= f.text_field :friday_exercise_seven_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+									  			   	<%= f.text_field :friday_exercise_seven_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+									  			   	<%= f.text_field :friday_exercise_seven_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+									  			    <%# close DIV 3 %></div><%# close DIV 1 %></div><%# close DIV 1 %>
+												
+												
+												
+												
+									  	<!-- Select Basic --><%# ------------------------ BEGIN FRIDAY EXERCISE 8 ----------------------------------%>
+									  				 <%# open DIV 1 %><div class="control-group span3">
+									  				 <%# open DIV 2 %><div class="controls">
+									  				 <%= f.text_field :friday_exercise_eight_name, type: "text", style: "margin: 0 auto;", class: "controls" %> </div> <%# close DIV 2 %>
+									  				 <%# open DIV 3 %><div class="controls exercise_inputs">
+									  				 <%= f.text_field :friday_exercise_eight_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+									  				 <%= f.text_field :friday_exercise_eight_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+									  				 <%= f.text_field :friday_exercise_eight_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+									  				 <%= f.text_field :friday_exercise_eight_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+							                         <%# close DIV 3 %></div><%# close DIV 1 %></div><%# close DIV 1 %>
+							                         </div><%# ------------------------ END ROW 10 ----------------------------------%>
+							                         </div><!-- Select Basic --><%# ------------------------ END FRIDAY WEIGHT TRAINING DIV ----------------------------------%>
+													 </div><!-- End #friday / -->
+                                           
+		 					  			<%# ------------------------ BEGIN SATURDAY WORKOUT ----------------------------------%> 
+		 					  						<div id="saturday" class="wo_day">
+		 					                        <h4>Saturday</h4>
+		 					                        <div class="control-group">
+		 					                        <div class="controls">
+		 					                        <h5>Describe this workout...</h5>
+		 					                        <%= f.text_field :saturday_workout_description, type: "text", placeholder: "", class: "span4" %>
+		 					                        </div>
+		 					                        </div>
+												
+		 					  			<!-- Select Basic --><%# ------------------------ BEGIN SATURDAY WEIGHT TRAINING DIV ----------------------------------%>	   
+		 					  		                <div class="weight_training">
+		 					  		                <h5>Enter strength training exercises...</h5>
+										
+		 					  			<!-- Select Basic --><%# ------------------------ BEGIN ROW 11 ----------------------------------%>
+		 					  			            <div class="row">
+										
+										
+		 								<!-- Select Basic --><%# ------------------------ BEGIN SATURDAY EXERCISE 1 ----------------------------------%>
+		 											<%# open DIV 1 %><div class="control-group span3">
+		 											<%# open DIV 2 %><div class="controls">
+		 											<%= f.text_field :saturday_exercise_one_name, type: "text", style: "margin: 0 auto;", class: "controls" %> </div> <%# close DIV 2 %>
+		 											<%# open DIV 3 %><div class="controls exercise_inputs">
+		 											<%= f.text_field :saturday_exercise_one_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+		 											<%= f.text_field :saturday_exercise_one_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+		 											<%= f.text_field :saturday_exercise_one_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+		 											<%= f.text_field :saturday_exercise_one_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+		 											<%# close DIV 3 %></div><%# close DIV 1 %></div><%# close DIV 1 %>
+                                            
+		 								<!-- Select Basic --><%# ------------------------ BEGIN SATURDAY EXERCISE 2 ----------------------------------%>
+		 										    <%# open DIV 1 %><div class="control-group span3">
+		 										    <%# open DIV 2 %><div class="controls">
+		 										    <%= f.text_field :saturday_exercise_two_name, type: "text", style: "margin: 0 auto;", class: "controls" %> </div> <%# close DIV 2 %>
+		 										    <%# open DIV 3 %><div class="controls exercise_inputs">
+		 										  	<%= f.text_field :saturday_exercise_two_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+		 										  	<%= f.text_field :saturday_exercise_two_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+		 										  	<%= f.text_field :saturday_exercise_two_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+		 										  	<%= f.text_field :saturday_exercise_two_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+		 										    <%# close DIV 3 %></div><%# close DIV 1 %></div><%# close DIV 1 %>
+                                                
+												
+		 								<!-- Select Basic --><%# ------------------------ BEGIN SATURDAY EXERCISE 3 ----------------------------------%>
+		 										  	<%# open DIV 1 %><div class="control-group span3">
+		 										  	<%# open DIV 2 %><div class="controls">
+		 										  	<%= f.text_field :saturday_exercise_three_name, type: "text", style: "margin: 0 auto;", class: "controls" %> </div> <%# close DIV 2 %>
+		 										  	<%# open DIV 3 %><div class="controls exercise_inputs">
+		 										  	<%= f.text_field :saturday_exercise_three_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+		 										  	<%= f.text_field :saturday_exercise_three_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+		 										  	<%= f.text_field :saturday_exercise_three_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+		 										  	<%= f.text_field :saturday_exercise_three_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+		 										  	<%# close DIV 3 %></div><%# close DIV 1 %></div><%# close DIV 1 %>
+												
+                                             
+		 								<!-- Select Basic --><%# ------------------------ BEGIN SATURDAY EXERCISE 4 ----------------------------------%>
+		 										    <%# open DIV 1 %><div class="control-group span3">
+		 										    <%# open DIV 2 %><div class="controls">
+		 										    <%= f.text_field :saturday_exercise_four_name, type: "text", style: "margin: 0 auto;", class: "controls" %> </div> <%# close DIV 2 %>
+		 										    <%# open DIV 3 %><div class="controls exercise_inputs">
+		 										    <%= f.text_field :saturday_exercise_four_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+		 										    <%= f.text_field :saturday_exercise_four_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+		 										    <%= f.text_field :saturday_exercise_four_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+		 										    <%= f.text_field :saturday_exercise_four_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+		 										    <%# close DIV 3 %></div><%# close DIV 1 %></div><%# close DIV 1 %>
+		 										  	</div><%# ------------------------ END ROW 11 ----------------------------------%>
+											   
+											   
+		 								<!-- Select Basic --><%# ------------------------ BEGIN ROW 12 ----------------------------------%>
+		 										  	<div class="row">
+												   
+		 								<!-- Select Basic --><%# ------------------------ BEGIN SATURDAY EXERCISE 5 ----------------------------------%>
+		 										  	<%# open DIV 1 %><div class="control-group span3">
+		 										  	<%# open DIV 2 %><div class="controls">
+		 										  	<%= f.text_field :saturday_exercise_five_name, type: "text", style: "margin: 0 auto;", class: "controls" %> </div> <%# close DIV 2 %>
+		 										  	<%# open DIV 3 %><div class="controls exercise_inputs">
+		 										  	<%= f.text_field :saturday_exercise_five_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+		 										  	<%= f.text_field :saturday_exercise_five_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+		 										  	<%= f.text_field :saturday_exercise_five_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+		 										  	<%= f.text_field :saturday_exercise_five_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+		 										  	<%# close DIV 3 %></div><%# close DIV 1 %></div><%# close DIV 1 %>
+												
+												
+		 								<!-- Select Basic --><%# ------------------------ BEGIN SATURDAY EXERCISE 6 ----------------------------------%>
+		 										  	<%# open DIV 1 %><div class="control-group span3">
+		 										  	<%# open DIV 2 %><div class="controls">
+		 										  	<%= f.text_field :saturday_exercise_six_name, type: "text", style: "margin: 0 auto;", class: "controls" %> </div> <%# close DIV 2 %>
+		 										  	<%# open DIV 3 %><div class="controls exercise_inputs">
+		 										  	<%= f.text_field :saturday_exercise_six_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+		 										  	<%= f.text_field :saturday_exercise_six_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+		 										  	<%= f.text_field :saturday_exercise_six_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+		 										  	<%= f.text_field :saturday_exercise_six_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+		 										  	<%# close DIV 3 %></div><%# close DIV 1 %></div><%# close DIV 1 %>
+                                                
+												
+		 								<!-- Select Basic --><%# ------------------------ BEGIN SATURDAY EXERCISE 7 ----------------------------------%>
+		 										  	<%# open DIV 1 %><div class="control-group span3">
+		 										  	<%# open DIV 2 %><div class="controls">
+		 										  	<%= f.text_field :saturday_exercise_seven_name, type: "text", style: "margin: 0 auto;", class: "controls" %> </div> <%# close DIV 2 %>
+		 										  	<%# open DIV 3 %><div class="controls exercise_inputs">
+		 										  	<%= f.text_field :saturday_exercise_seven_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+		 										  	<%= f.text_field :saturday_exercise_seven_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+		 										  	<%= f.text_field :saturday_exercise_seven_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+		 										  	<%= f.text_field :saturday_exercise_seven_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+		 										  	<%# close DIV 3 %></div><%# close DIV 1 %></div><%# close DIV 1 %>
+												
+												
+												
+												
+		 								<!-- Select Basic --><%# ------------------------ BEGIN SATURDAY EXERCISE 8 ----------------------------------%>
+		 										  	<%# open DIV 1 %><div class="control-group span3">
+		 										  	<%# open DIV 2 %><div class="controls">
+		 										  	<%= f.text_field :saturday_exercise_eight_name, type: "text", style: "margin: 0 auto;", class: "controls" %> </div> <%# close DIV 2 %>
+		 										  	<%# open DIV 3 %><div class="controls exercise_inputs">
+		 										  	<%= f.text_field :saturday_exercise_eight_reps, type: "text", style: "margin: 0 auto;", placeholder: "Reps", class: "span1" %>
+		 										  	<%= f.text_field :saturday_exercise_eight_sets, type: "text", style: "margin: 0 auto;", placeholder: "Sets", class: "span1" %>
+		 										  	<%= f.text_field :saturday_exercise_eight_tempo, type: "text", style: "margin: 0 auto;", placeholder: "Tempo", class: "span1" %>
+		 										  	<%= f.text_field :saturday_exercise_eight_rest, type: "text", style: "margin: 0 auto;", placeholder: "Rest", class: "span1" %>
+		 								            <%# close DIV 3 %></div><%# close DIV 1 %></div><%# close DIV 1 %>
+		 								            </div><%# ------------------------ END ROW 12 ----------------------------------%>
+		 								            </div><!-- Select Basic --><%# ------------------------ END SATURDAY WEIGHT TRAINING DIV ----------------------------------%>
+		 											</div><!-- End #saturday / -->
+													
+										 <%# ---------------------------------------------------- END FULL WEEK ----------------------------------------------------------------%>			
+                         
+							                           
+													   
+													   
+													   
+													   
+													   
+													   </div>
+                </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+	<% end %>

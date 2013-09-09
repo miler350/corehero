@@ -12,7 +12,7 @@ class WorkoutsController < ApplicationController
     @workout = Workout.new(workout_params)
     choose_association
     if @workout.save
-      redirect_to workouts_path, notice: "Workout created."
+      redirect_to choose_edit_path, notice: "Workout created."
     else
       render 'new'
     end
@@ -52,6 +52,12 @@ class WorkoutsController < ApplicationController
   def choose_association
     if Workout.strength_workouts.include? @workout.template
       @strengthworkout = @workout.build_strengthworkout(strengthworkout_params)
+    end
+  end
+  
+  def choose_edit_path
+    if Workout.strength_workouts.include? @workout.template
+      edit_strengthworkout_path(@strengthworkout)
     end
   end
   
