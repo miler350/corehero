@@ -1,0 +1,2 @@
+module StrengthworkoutsHelper
+end
