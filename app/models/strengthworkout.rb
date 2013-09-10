@@ -9,10 +9,6 @@ class Strengthworkout < ActiveRecord::Base
  
  
  
- 
- 
- 
- 
   private
   
   def fill_in_template

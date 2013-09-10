@@ -2,5 +2,5 @@
 
 <% @workouts.each do |workout| %>
 <div>
-<%= "  DATE: #{workout.start_date} ---->  #{workout.template} ----> #{workout.users[0].email} " %></div>
+<%= "DATE: #{workout.start_date} ----> " %> <%= link_to workout.template, workout_strengthworkout_path(workout) %> <%= "----> #{workout.users[0].email} " %></div>
 <% end %>

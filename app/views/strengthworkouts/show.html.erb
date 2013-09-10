@@ -1,0 +1,609 @@
+
+
+     <div id="show_workout">
+        <div id="section_header">
+            <div class="container">
+                <div class="row">
+                    <div class="wo_header">
+                        <div class="wo_title">
+                            <h5>Title</h5>
+                            <h2><%= @strengthworkout.start_date %> - <%= @strengthworkout.title %></h2>
+                        </div>
+                        <div class="wo_days">
+                            <h5>Days</h5>
+                            <p class="lead"><%= @strengthworkout.days %>d / Week</p>
+                        </div>
+                        <div class="wo_goals">
+                            <h5>Keyword Tags</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="weekly_workout">
+        <div class="container">
+            <div class="row">
+                            <div id="monday" class="wo_day">
+                                <h4>Monday</h4>
+                                <h5><%= @strengthworkout.monday_workout_description if @strengthworkout.monday_workout_description.present?  %></h5>
+                                <% if @strengthworkout.monday_exercise_one_name.present? %>
+								<table class="table table-condensed">
+                                  <thead>
+                                    <tr>
+                                      <th>Exercise</th>
+                                      <th>Sets</th>
+                                      <th>Reps</th>
+                                      <th>Rest</th>
+                                      <th>Tempo</th>
+                                    </tr>
+                                  </thead><% end %>
+                                  <tbody>
+									  <% if @strengthworkout.monday_exercise_one_name.present? %>
+                                    <tr>
+                                      <td><%= @strengthworkout.monday_exercise_one_name if @strengthworkout.monday_exercise_one_name?  %></td>
+                                      <td><%= @strengthworkout.monday_exercise_one_sets if @strengthworkout.monday_exercise_one_name?  %></td>
+                                      <td><%= @strengthworkout.monday_exercise_one_reps if @strengthworkout.monday_exercise_one_name?  %></td>
+                                      <td><%= @strengthworkout.monday_exercise_one_rest if @strengthworkout.monday_exercise_one_name?  %></td>
+                                      <td><%= @strengthworkout.monday_exercise_one_tempo if @strengthworkout.monday_exercise_one_name?  %></td>
+                                    </tr><% end %>
+									<% if @strengthworkout.monday_exercise_two_name.present? %>
+                                    <tr>
+									  <td><%= @strengthworkout.monday_exercise_two_name if @strengthworkout.monday_exercise_two_name?  %></td>
+									  <td><%= @strengthworkout.monday_exercise_two_sets if @strengthworkout.monday_exercise_two_name?  %></td>
+									  <td><%= @strengthworkout.monday_exercise_two_reps if @strengthworkout.monday_exercise_two_name?  %></td>
+									  <td><%= @strengthworkout.monday_exercise_two_rest if @strengthworkout.monday_exercise_two_name?  %></td>
+									  <td><%= @strengthworkout.monday_exercise_two_tempo if @strengthworkout.monday_exercise_two_name?  %></td>
+                                      
+                                    </tr><% end %>
+									<% if @strengthworkout.monday_exercise_three_name.present? %>
+                                    <tr>
+									  <td><%= @strengthworkout.monday_exercise_three_name if @strengthworkout.monday_exercise_three_name?  %></td>
+									  <td><%= @strengthworkout.monday_exercise_three_sets if @strengthworkout.monday_exercise_three_name?  %></td>
+									  <td><%= @strengthworkout.monday_exercise_three_reps if @strengthworkout.monday_exercise_three_name?  %></td>
+									  <td><%= @strengthworkout.monday_exercise_three_rest if @strengthworkout.monday_exercise_three_name?  %></td>
+									  <td><%= @strengthworkout.monday_exercise_three_tempo if @strengthworkout.monday_exercise_three_name?  %></td>
+                                      
+                                    </tr><% end %>
+                                    
+									<% if @strengthworkout.monday_exercise_four_name.present? %>
+                                    <tr>
+									  <td><%= @strengthworkout.monday_exercise_four_name if @strengthworkout.monday_exercise_four_name?  %></td>
+									  <td><%= @strengthworkout.monday_exercise_four_sets if @strengthworkout.monday_exercise_four_name?  %></td>
+									  <td><%= @strengthworkout.monday_exercise_four_reps if @strengthworkout.monday_exercise_four_name?  %></td>
+									  <td><%= @strengthworkout.monday_exercise_four_rest if @strengthworkout.monday_exercise_four_name?  %></td>
+									  <td><%= @strengthworkout.monday_exercise_four_tempo if @strengthworkout.monday_exercise_four_name?  %></td>
+                                      
+                                    </tr><% end %>
+                                    
+									<% if @strengthworkout.monday_exercise_five_name.present? %>
+                                    <tr>
+									  <td><%= @strengthworkout.monday_exercise_five_name if @strengthworkout.monday_exercise_five_name?  %></td>
+									  <td><%= @strengthworkout.monday_exercise_five_sets if @strengthworkout.monday_exercise_five_name?  %></td>
+									  <td><%= @strengthworkout.monday_exercise_five_reps if @strengthworkout.monday_exercise_five_name?  %></td>
+									  <td><%= @strengthworkout.monday_exercise_five_rest if @strengthworkout.monday_exercise_five_name?  %></td>
+									  <td><%= @strengthworkout.monday_exercise_five_tempo if @strengthworkout.monday_exercise_five_name?  %></td>
+                                      
+                                    </tr><% end %>
+                                    
+									<% if @strengthworkout.monday_exercise_six_name.present? %>
+                                    <tr>
+									  <td><%= @strengthworkout.monday_exercise_six_name if @strengthworkout.monday_exercise_six_name?  %></td>
+									  <td><%= @strengthworkout.monday_exercise_six_sets if @strengthworkout.monday_exercise_six_name?  %></td>
+									  <td><%= @strengthworkout.monday_exercise_six_reps if @strengthworkout.monday_exercise_six_name?  %></td>
+									  <td><%= @strengthworkout.monday_exercise_six_rest if @strengthworkout.monday_exercise_six_name?  %></td>
+									  <td><%= @strengthworkout.monday_exercise_six_tempo if @strengthworkout.monday_exercise_six_name?  %></td>
+                                      
+                                    </tr><% end %>
+                                    
+									<% if @strengthworkout.monday_exercise_seven_name.present? %>
+                                    <tr>
+									  <td><%= @strengthworkout.monday_exercise_seven_name if @strengthworkout.monday_exercise_seven_name?  %></td>
+									  <td><%= @strengthworkout.monday_exercise_seven_sets if @strengthworkout.monday_exercise_seven_name?  %></td>
+									  <td><%= @strengthworkout.monday_exercise_seven_reps if @strengthworkout.monday_exercise_seven_name?  %></td>
+									  <td><%= @strengthworkout.monday_exercise_seven_rest if @strengthworkout.monday_exercise_seven_name?  %></td>
+									  <td><%= @strengthworkout.monday_exercise_seven_tempo if @strengthworkout.monday_exercise_seven_name?  %></td>
+                                      
+                                    </tr><% end %>
+									
+									<% if @strengthworkout.monday_exercise_eight_name.present? %>
+                                    <tr>
+									  <td><%= @strengthworkout.monday_exercise_eight_name if @strengthworkout.monday_exercise_eight_name?  %></td>
+									  <td><%= @strengthworkout.monday_exercise_eight_sets if @strengthworkout.monday_exercise_eight_name?  %></td>
+									  <td><%= @strengthworkout.monday_exercise_eight_reps if @strengthworkout.monday_exercise_eight_name?  %></td>
+									  <td><%= @strengthworkout.monday_exercise_eight_rest if @strengthworkout.monday_exercise_eight_name?  %></td>
+									  <td><%= @strengthworkout.monday_exercise_eight_tempo if @strengthworkout.monday_exercise_eight_name?  %></td>
+                                      
+                                    </tr><% end %>
+                                  </tbody>
+                                </table>
+                            </div><!-- End #monday / -->
+							
+                                <div id="tuesday" class="wo_day">
+                                    <h4>Tuesday</h4>
+                                <h5><%= @strengthworkout.tuesday_workout_description %></h5>
+								<% if @strengthworkout.tuesday_exercise_one_name.present? %>
+                                <table class="table table-condensed">
+                                  <thead>
+                                    <tr>
+                                      <th>Exercise</th>
+                                      <th>Sets</th>
+                                      <th>Reps</th>
+                                      <th>Rest</th>
+                                      <th>Tempo</th>
+                                    </tr>
+                                  </thead><% end %>
+                                  <tbody>
+									  <% if @strengthworkout.tuesday_exercise_one_name.present? %>
+                                    <tr>
+                                      <td><%= @strengthworkout.tuesday_exercise_one_name if @strengthworkout.tuesday_exercise_one_name?  %></td>
+                                      <td><%= @strengthworkout.tuesday_exercise_one_sets if @strengthworkout.tuesday_exercise_one_name?  %></td>
+                                      <td><%= @strengthworkout.tuesday_exercise_one_reps if @strengthworkout.tuesday_exercise_one_name?  %></td>
+                                      <td><%= @strengthworkout.tuesday_exercise_one_rest if @strengthworkout.tuesday_exercise_one_name?  %></td>
+                                      <td><%= @strengthworkout.tuesday_exercise_one_tempo if @strengthworkout.tuesday_exercise_one_name?  %></td>
+                                    </tr><% end %>
+									<% if @strengthworkout.tuesday_exercise_two_name.present? %>
+                                    <tr>
+									  <td><%= @strengthworkout.tuesday_exercise_two_name if @strengthworkout.tuesday_exercise_two_name?  %></td>
+									  <td><%= @strengthworkout.tuesday_exercise_two_sets if @strengthworkout.tuesday_exercise_two_name?  %></td>
+									  <td><%= @strengthworkout.tuesday_exercise_two_reps if @strengthworkout.tuesday_exercise_two_name?  %></td>
+									  <td><%= @strengthworkout.tuesday_exercise_two_rest if @strengthworkout.tuesday_exercise_two_name?  %></td>
+									  <td><%= @strengthworkout.tuesday_exercise_two_tempo if @strengthworkout.tuesday_exercise_two_name?  %></td>
+                                      
+                                    </tr><% end %>
+									<% if @strengthworkout.tuesday_exercise_three_name.present? %>
+                                    <tr>
+									  <td><%= @strengthworkout.tuesday_exercise_three_name if @strengthworkout.tuesday_exercise_three_name?  %></td>
+									  <td><%= @strengthworkout.tuesday_exercise_three_sets if @strengthworkout.tuesday_exercise_three_name?  %></td>
+									  <td><%= @strengthworkout.tuesday_exercise_three_reps if @strengthworkout.tuesday_exercise_three_name?  %></td>
+									  <td><%= @strengthworkout.tuesday_exercise_three_rest if @strengthworkout.tuesday_exercise_three_name?  %></td>
+									  <td><%= @strengthworkout.tuesday_exercise_three_tempo if @strengthworkout.tuesday_exercise_three_name?  %></td>
+                                      
+                                    </tr><% end %>
+                                    
+									<% if @strengthworkout.tuesday_exercise_four_name.present? %>
+                                    <tr>
+									  <td><%= @strengthworkout.tuesday_exercise_four_name if @strengthworkout.tuesday_exercise_four_name?  %></td>
+									  <td><%= @strengthworkout.tuesday_exercise_four_sets if @strengthworkout.tuesday_exercise_four_name?  %></td>
+									  <td><%= @strengthworkout.tuesday_exercise_four_reps if @strengthworkout.tuesday_exercise_four_name?  %></td>
+									  <td><%= @strengthworkout.tuesday_exercise_four_rest if @strengthworkout.tuesday_exercise_four_name?  %></td>
+									  <td><%= @strengthworkout.tuesday_exercise_four_tempo if @strengthworkout.tuesday_exercise_four_name?  %></td>
+                                      
+                                    </tr><% end %>
+                                    
+									<% if @strengthworkout.tuesday_exercise_five_name.present? %>
+                                    <tr>
+									  <td><%= @strengthworkout.tuesday_exercise_five_name if @strengthworkout.tuesday_exercise_five_name?  %></td>
+									  <td><%= @strengthworkout.tuesday_exercise_five_sets if @strengthworkout.tuesday_exercise_five_name?  %></td>
+									  <td><%= @strengthworkout.tuesday_exercise_five_reps if @strengthworkout.tuesday_exercise_five_name?  %></td>
+									  <td><%= @strengthworkout.tuesday_exercise_five_rest if @strengthworkout.tuesday_exercise_five_name?  %></td>
+									  <td><%= @strengthworkout.tuesday_exercise_five_tempo if @strengthworkout.tuesday_exercise_five_name?  %></td>
+                                      
+                                    </tr><% end %>
+                                    
+									<% if @strengthworkout.tuesday_exercise_six_name.present? %>
+                                    <tr>
+									  <td><%= @strengthworkout.tuesday_exercise_six_name if @strengthworkout.tuesday_exercise_six_name?  %></td>
+									  <td><%= @strengthworkout.tuesday_exercise_six_sets if @strengthworkout.tuesday_exercise_six_name?  %></td>
+									  <td><%= @strengthworkout.tuesday_exercise_six_reps if @strengthworkout.tuesday_exercise_six_name?  %></td>
+									  <td><%= @strengthworkout.tuesday_exercise_six_rest if @strengthworkout.tuesday_exercise_six_name?  %></td>
+									  <td><%= @strengthworkout.tuesday_exercise_six_tempo if @strengthworkout.tuesday_exercise_six_name?  %></td>
+                                      
+                                    </tr><% end %>
+                                    
+									<% if @strengthworkout.tuesday_exercise_seven_name.present? %>
+                                    <tr>
+									  <td><%= @strengthworkout.tuesday_exercise_seven_name if @strengthworkout.tuesday_exercise_seven_name?  %></td>
+									  <td><%= @strengthworkout.tuesday_exercise_seven_sets if @strengthworkout.tuesday_exercise_seven_name?  %></td>
+									  <td><%= @strengthworkout.tuesday_exercise_seven_reps if @strengthworkout.tuesday_exercise_seven_name?  %></td>
+									  <td><%= @strengthworkout.tuesday_exercise_seven_rest if @strengthworkout.tuesday_exercise_seven_name?  %></td>
+									  <td><%= @strengthworkout.tuesday_exercise_seven_tempo if @strengthworkout.tuesday_exercise_seven_name?  %></td>
+                                      
+                                    </tr><% end %>
+									
+									<% if @strengthworkout.tuesday_exercise_eight_name.present? %>
+                                    <tr>
+									  <td><%= @strengthworkout.tuesday_exercise_eight_name if @strengthworkout.tuesday_exercise_eight_name?  %></td>
+									  <td><%= @strengthworkout.tuesday_exercise_eight_sets if @strengthworkout.tuesday_exercise_eight_name?  %></td>
+									  <td><%= @strengthworkout.tuesday_exercise_eight_reps if @strengthworkout.tuesday_exercise_eight_name?  %></td>
+									  <td><%= @strengthworkout.tuesday_exercise_eight_rest if @strengthworkout.tuesday_exercise_eight_name?  %></td>
+									  <td><%= @strengthworkout.tuesday_exercise_eight_tempo if @strengthworkout.tuesday_exercise_eight_name?  %></td>
+                                      
+                                    </tr><% end %>
+                                  </tbody>
+                                  
+                                </table>
+                             </div>
+                             <div id="wednesday" class="wo_day">
+                                <h4>Wednesday</h4>
+                                <h5><%= @strengthworkout.wednesday_workout_description %></h5>
+								<% if @strengthworkout.wednesday_exercise_one_name.present? %>
+                                <table class="table table-condensed">
+                                  <thead>
+                                    <tr>
+                                      <th>Exercise</th>
+                                      <th>Sets</th>
+                                      <th>Reps</th>
+                                      <th>Rest</th>
+                                      <th>Tempo</th>
+                                    </tr>
+                                  </thead><% end %>
+                                  <tbody>
+									  <% if @strengthworkout.wednesday_exercise_one_name.present? %>
+                                    <tr>
+                                      <td><%= @strengthworkout.wednesday_exercise_one_name if @strengthworkout.wednesday_exercise_one_name?  %></td>
+                                      <td><%= @strengthworkout.wednesday_exercise_one_sets if @strengthworkout.wednesday_exercise_one_name?  %></td>
+                                      <td><%= @strengthworkout.wednesday_exercise_one_reps if @strengthworkout.wednesday_exercise_one_name?  %></td>
+                                      <td><%= @strengthworkout.wednesday_exercise_one_rest if @strengthworkout.wednesday_exercise_one_name?  %></td>
+                                      <td><%= @strengthworkout.wednesday_exercise_one_tempo if @strengthworkout.wednesday_exercise_one_name?  %></td>
+                                    </tr><% end %>
+									<% if @strengthworkout.wednesday_exercise_two_name.present? %>
+                                    <tr>
+									  <td><%= @strengthworkout.wednesday_exercise_two_name if @strengthworkout.wednesday_exercise_two_name?  %></td>
+									  <td><%= @strengthworkout.wednesday_exercise_two_sets if @strengthworkout.wednesday_exercise_two_name?  %></td>
+									  <td><%= @strengthworkout.wednesday_exercise_two_reps if @strengthworkout.wednesday_exercise_two_name?  %></td>
+									  <td><%= @strengthworkout.wednesday_exercise_two_rest if @strengthworkout.wednesday_exercise_two_name?  %></td>
+									  <td><%= @strengthworkout.wednesday_exercise_two_tempo if @strengthworkout.wednesday_exercise_two_name?  %></td>
+                                      
+                                    </tr><% end %>
+									<% if @strengthworkout.wednesday_exercise_three_name.present? %>
+                                    <tr>
+									  <td><%= @strengthworkout.wednesday_exercise_three_name if @strengthworkout.wednesday_exercise_three_name?  %></td>
+									  <td><%= @strengthworkout.wednesday_exercise_three_sets if @strengthworkout.wednesday_exercise_three_name?  %></td>
+									  <td><%= @strengthworkout.wednesday_exercise_three_reps if @strengthworkout.wednesday_exercise_three_name?  %></td>
+									  <td><%= @strengthworkout.wednesday_exercise_three_rest if @strengthworkout.wednesday_exercise_three_name?  %></td>
+									  <td><%= @strengthworkout.wednesday_exercise_three_tempo if @strengthworkout.wednesday_exercise_three_name?  %></td>
+                                      
+                                    </tr><% end %>
+                                    
+									<% if @strengthworkout.wednesday_exercise_four_name.present? %>
+                                    <tr>
+									  <td><%= @strengthworkout.wednesday_exercise_four_name if @strengthworkout.wednesday_exercise_four_name?  %></td>
+									  <td><%= @strengthworkout.wednesday_exercise_four_sets if @strengthworkout.wednesday_exercise_four_name?  %></td>
+									  <td><%= @strengthworkout.wednesday_exercise_four_reps if @strengthworkout.wednesday_exercise_four_name?  %></td>
+									  <td><%= @strengthworkout.wednesday_exercise_four_rest if @strengthworkout.wednesday_exercise_four_name?  %></td>
+									  <td><%= @strengthworkout.wednesday_exercise_four_tempo if @strengthworkout.wednesday_exercise_four_name?  %></td>
+                                      
+                                    </tr><% end %>
+                                    
+									<% if @strengthworkout.wednesday_exercise_five_name.present? %>
+                                    <tr>
+									  <td><%= @strengthworkout.wednesday_exercise_five_name if @strengthworkout.wednesday_exercise_five_name?  %></td>
+									  <td><%= @strengthworkout.wednesday_exercise_five_sets if @strengthworkout.wednesday_exercise_five_name?  %></td>
+									  <td><%= @strengthworkout.wednesday_exercise_five_reps if @strengthworkout.wednesday_exercise_five_name?  %></td>
+									  <td><%= @strengthworkout.wednesday_exercise_five_rest if @strengthworkout.wednesday_exercise_five_name?  %></td>
+									  <td><%= @strengthworkout.wednesday_exercise_five_tempo if @strengthworkout.wednesday_exercise_five_name?  %></td>
+                                      
+                                    </tr><% end %>
+                                    
+									<% if @strengthworkout.wednesday_exercise_six_name.present? %>
+                                    <tr>
+									  <td><%= @strengthworkout.wednesday_exercise_six_name if @strengthworkout.wednesday_exercise_six_name?  %></td>
+									  <td><%= @strengthworkout.wednesday_exercise_six_sets if @strengthworkout.wednesday_exercise_six_name?  %></td>
+									  <td><%= @strengthworkout.wednesday_exercise_six_reps if @strengthworkout.wednesday_exercise_six_name?  %></td>
+									  <td><%= @strengthworkout.wednesday_exercise_six_rest if @strengthworkout.wednesday_exercise_six_name?  %></td>
+									  <td><%= @strengthworkout.wednesday_exercise_six_tempo if @strengthworkout.wednesday_exercise_six_name?  %></td>
+                                      
+                                    </tr><% end %>
+                                    
+									<% if @strengthworkout.wednesday_exercise_seven_name.present? %>
+                                    <tr>
+									  <td><%= @strengthworkout.wednesday_exercise_seven_name if @strengthworkout.wednesday_exercise_seven_name?  %></td>
+									  <td><%= @strengthworkout.wednesday_exercise_seven_sets if @strengthworkout.wednesday_exercise_seven_name?  %></td>
+									  <td><%= @strengthworkout.wednesday_exercise_seven_reps if @strengthworkout.wednesday_exercise_seven_name?  %></td>
+									  <td><%= @strengthworkout.wednesday_exercise_seven_rest if @strengthworkout.wednesday_exercise_seven_name?  %></td>
+									  <td><%= @strengthworkout.wednesday_exercise_seven_tempo if @strengthworkout.wednesday_exercise_seven_name?  %></td>
+                                      
+                                    </tr><% end %>
+									
+									<% if @strengthworkout.wednesday_exercise_eight_name.present? %>
+                                    <tr>
+									  <td><%= @strengthworkout.wednesday_exercise_eight_name if @strengthworkout.wednesday_exercise_eight_name?  %></td>
+									  <td><%= @strengthworkout.wednesday_exercise_eight_sets if @strengthworkout.wednesday_exercise_eight_name?  %></td>
+									  <td><%= @strengthworkout.wednesday_exercise_eight_reps if @strengthworkout.wednesday_exercise_eight_name?  %></td>
+									  <td><%= @strengthworkout.wednesday_exercise_eight_rest if @strengthworkout.wednesday_exercise_eight_name?  %></td>
+									  <td><%= @strengthworkout.wednesday_exercise_eight_tempo if @strengthworkout.wednesday_exercise_eight_name?  %></td>
+                                      
+                                    </tr><% end %>
+                                  </tbody>
+                                
+                                </table>
+                            </div>
+                            <div id="thursday" class="wo_day">
+                                <h4>Thursday</h4>
+                                <h5><%= @strengthworkout.thursday_workout_description %></h5>
+								<% if @strengthworkout.thursday_exercise_one_name.present? %>
+                                <table class="table table-condensed">
+                                  <thead>
+                                    <tr>
+                                      <th>Exercise</th>
+                                      <th>Sets</th>
+                                      <th>Reps</th>
+                                      <th>Rest</th>
+                                      <th>Tempo</th>
+                                    </tr>
+                                  </thead><% end %>
+                                
+                                  <tbody>
+									  <% if @strengthworkout.thursday_exercise_one_name.present? %>
+                                    <tr>
+                                      <td><%= @strengthworkout.thursday_exercise_one_name if @strengthworkout.thursday_exercise_one_name?  %></td>
+                                      <td><%= @strengthworkout.thursday_exercise_one_sets if @strengthworkout.thursday_exercise_one_name?  %></td>
+                                      <td><%= @strengthworkout.thursday_exercise_one_reps if @strengthworkout.thursday_exercise_one_name?  %></td>
+                                      <td><%= @strengthworkout.thursday_exercise_one_rest if @strengthworkout.thursday_exercise_one_name?  %></td>
+                                      <td><%= @strengthworkout.thursday_exercise_one_tempo if @strengthworkout.thursday_exercise_one_name?  %></td>
+                                    </tr><% end %>
+									<% if @strengthworkout.thursday_exercise_two_name.present? %>
+                                    <tr>
+									  <td><%= @strengthworkout.thursday_exercise_two_name if @strengthworkout.thursday_exercise_two_name?  %></td>
+									  <td><%= @strengthworkout.thursday_exercise_two_sets if @strengthworkout.thursday_exercise_two_name?  %></td>
+									  <td><%= @strengthworkout.thursday_exercise_two_reps if @strengthworkout.thursday_exercise_two_name?  %></td>
+									  <td><%= @strengthworkout.thursday_exercise_two_rest if @strengthworkout.thursday_exercise_two_name?  %></td>
+									  <td><%= @strengthworkout.thursday_exercise_two_tempo if @strengthworkout.thursday_exercise_two_name?  %></td>
+                                      
+                                    </tr><% end %>
+									<% if @strengthworkout.thursday_exercise_three_name.present? %>
+                                    <tr>
+									  <td><%= @strengthworkout.thursday_exercise_three_name if @strengthworkout.thursday_exercise_three_name?  %></td>
+									  <td><%= @strengthworkout.thursday_exercise_three_sets if @strengthworkout.thursday_exercise_three_name?  %></td>
+									  <td><%= @strengthworkout.thursday_exercise_three_reps if @strengthworkout.thursday_exercise_three_name?  %></td>
+									  <td><%= @strengthworkout.thursday_exercise_three_rest if @strengthworkout.thursday_exercise_three_name?  %></td>
+									  <td><%= @strengthworkout.thursday_exercise_three_tempo if @strengthworkout.thursday_exercise_three_name?  %></td>
+                                      
+                                    </tr><% end %>
+                                    
+									<% if @strengthworkout.thursday_exercise_four_name.present? %>
+                                    <tr>
+									  <td><%= @strengthworkout.thursday_exercise_four_name if @strengthworkout.thursday_exercise_four_name?  %></td>
+									  <td><%= @strengthworkout.thursday_exercise_four_sets if @strengthworkout.thursday_exercise_four_name?  %></td>
+									  <td><%= @strengthworkout.thursday_exercise_four_reps if @strengthworkout.thursday_exercise_four_name?  %></td>
+									  <td><%= @strengthworkout.thursday_exercise_four_rest if @strengthworkout.thursday_exercise_four_name?  %></td>
+									  <td><%= @strengthworkout.thursday_exercise_four_tempo if @strengthworkout.thursday_exercise_four_name?  %></td>
+                                      
+                                    </tr><% end %>
+                                    
+									<% if @strengthworkout.thursday_exercise_five_name.present? %>
+                                    <tr>
+									  <td><%= @strengthworkout.thursday_exercise_five_name if @strengthworkout.thursday_exercise_five_name?  %></td>
+									  <td><%= @strengthworkout.thursday_exercise_five_sets if @strengthworkout.thursday_exercise_five_name?  %></td>
+									  <td><%= @strengthworkout.thursday_exercise_five_reps if @strengthworkout.thursday_exercise_five_name?  %></td>
+									  <td><%= @strengthworkout.thursday_exercise_five_rest if @strengthworkout.thursday_exercise_five_name?  %></td>
+									  <td><%= @strengthworkout.thursday_exercise_five_tempo if @strengthworkout.thursday_exercise_five_name?  %></td>
+                                      
+                                    </tr><% end %>
+                                    
+									<% if @strengthworkout.thursday_exercise_six_name.present? %>
+                                    <tr>
+									  <td><%= @strengthworkout.thursday_exercise_six_name if @strengthworkout.thursday_exercise_six_name?  %></td>
+									  <td><%= @strengthworkout.thursday_exercise_six_sets if @strengthworkout.thursday_exercise_six_name?  %></td>
+									  <td><%= @strengthworkout.thursday_exercise_six_reps if @strengthworkout.thursday_exercise_six_name?  %></td>
+									  <td><%= @strengthworkout.thursday_exercise_six_rest if @strengthworkout.thursday_exercise_six_name?  %></td>
+									  <td><%= @strengthworkout.thursday_exercise_six_tempo if @strengthworkout.thursday_exercise_six_name?  %></td>
+                                      
+                                    </tr><% end %>
+                                    
+									<% if @strengthworkout.thursday_exercise_seven_name.present? %>
+                                    <tr>
+									  <td><%= @strengthworkout.thursday_exercise_seven_name if @strengthworkout.thursday_exercise_seven_name?  %></td>
+									  <td><%= @strengthworkout.thursday_exercise_seven_sets if @strengthworkout.thursday_exercise_seven_name?  %></td>
+									  <td><%= @strengthworkout.thursday_exercise_seven_reps if @strengthworkout.thursday_exercise_seven_name?  %></td>
+									  <td><%= @strengthworkout.thursday_exercise_seven_rest if @strengthworkout.thursday_exercise_seven_name?  %></td>
+									  <td><%= @strengthworkout.thursday_exercise_seven_tempo if @strengthworkout.thursday_exercise_seven_name?  %></td>
+                                      
+                                    </tr><% end %>
+									
+									<% if @strengthworkout.thursday_exercise_eight_name.present? %>
+                                    <tr>
+									  <td><%= @strengthworkout.thursday_exercise_eight_name if @strengthworkout.thursday_exercise_eight_name?  %></td>
+									  <td><%= @strengthworkout.thursday_exercise_eight_sets if @strengthworkout.thursday_exercise_eight_name?  %></td>
+									  <td><%= @strengthworkout.thursday_exercise_eight_reps if @strengthworkout.thursday_exercise_eight_name?  %></td>
+									  <td><%= @strengthworkout.thursday_exercise_eight_rest if @strengthworkout.thursday_exercise_eight_name?  %></td>
+									  <td><%= @strengthworkout.thursday_exercise_eight_tempo if @strengthworkout.thursday_exercise_eight_name?  %></td>
+                                      
+                                    </tr><% end %>
+                                  </tbody>
+                                  
+                                </table>
+                                </div><!-- End #monday / -->
+                                <div id="friday" class="wo_day">
+                                <h4>Friday</h4>
+                                <h5><%= @strengthworkout.friday_workout_description %></h5>
+								<% if @strengthworkout.friday_exercise_one_name.present? %>
+                                <table class="table table-condensed">
+                                  <thead>
+                                    <tr>
+                                      <th>Exercise</th>
+                                      <th>Sets</th>
+                                      <th>Reps</th>
+                                      <th>Rest</th>
+                                      <th>Tempo</th>
+                                    </tr>
+                                  </thead><% end %>
+                               
+                                  <tbody>
+									  <% if @strengthworkout.friday_exercise_one_name.present? %>
+                                    <tr>
+                                      <td><%= @strengthworkout.friday_exercise_one_name if @strengthworkout.friday_exercise_one_name?  %></td>
+                                      <td><%= @strengthworkout.friday_exercise_one_sets if @strengthworkout.friday_exercise_one_name?  %></td>
+                                      <td><%= @strengthworkout.friday_exercise_one_reps if @strengthworkout.friday_exercise_one_name?  %></td>
+                                      <td><%= @strengthworkout.friday_exercise_one_rest if @strengthworkout.friday_exercise_one_name?  %></td>
+                                      <td><%= @strengthworkout.friday_exercise_one_tempo if @strengthworkout.friday_exercise_one_name?  %></td>
+                                    </tr><% end %>
+									<% if @strengthworkout.friday_exercise_two_name.present? %>
+                                    <tr>
+									  <td><%= @strengthworkout.friday_exercise_two_name if @strengthworkout.friday_exercise_two_name?  %></td>
+									  <td><%= @strengthworkout.friday_exercise_two_sets if @strengthworkout.friday_exercise_two_name?  %></td>
+									  <td><%= @strengthworkout.friday_exercise_two_reps if @strengthworkout.friday_exercise_two_name?  %></td>
+									  <td><%= @strengthworkout.friday_exercise_two_rest if @strengthworkout.friday_exercise_two_name?  %></td>
+									  <td><%= @strengthworkout.friday_exercise_two_tempo if @strengthworkout.friday_exercise_two_name?  %></td>
+                                      
+                                    </tr><% end %>
+									<% if @strengthworkout.friday_exercise_three_name.present? %>
+                                    <tr>
+									  <td><%= @strengthworkout.friday_exercise_three_name if @strengthworkout.friday_exercise_three_name?  %></td>
+									  <td><%= @strengthworkout.friday_exercise_three_sets if @strengthworkout.friday_exercise_three_name?  %></td>
+									  <td><%= @strengthworkout.friday_exercise_three_reps if @strengthworkout.friday_exercise_three_name?  %></td>
+									  <td><%= @strengthworkout.friday_exercise_three_rest if @strengthworkout.friday_exercise_three_name?  %></td>
+									  <td><%= @strengthworkout.friday_exercise_three_tempo if @strengthworkout.friday_exercise_three_name?  %></td>
+                                      
+                                    </tr><% end %>
+                                    
+									<% if @strengthworkout.friday_exercise_four_name.present? %>
+                                    <tr>
+									  <td><%= @strengthworkout.friday_exercise_four_name if @strengthworkout.friday_exercise_four_name?  %></td>
+									  <td><%= @strengthworkout.friday_exercise_four_sets if @strengthworkout.friday_exercise_four_name?  %></td>
+									  <td><%= @strengthworkout.friday_exercise_four_reps if @strengthworkout.friday_exercise_four_name?  %></td>
+									  <td><%= @strengthworkout.friday_exercise_four_rest if @strengthworkout.friday_exercise_four_name?  %></td>
+									  <td><%= @strengthworkout.friday_exercise_four_tempo if @strengthworkout.friday_exercise_four_name?  %></td>
+                                      
+                                    </tr><% end %>
+                                    
+									<% if @strengthworkout.friday_exercise_five_name.present? %>
+                                    <tr>
+									  <td><%= @strengthworkout.friday_exercise_five_name if @strengthworkout.friday_exercise_five_name?  %></td>
+									  <td><%= @strengthworkout.friday_exercise_five_sets if @strengthworkout.friday_exercise_five_name?  %></td>
+									  <td><%= @strengthworkout.friday_exercise_five_reps if @strengthworkout.friday_exercise_five_name?  %></td>
+									  <td><%= @strengthworkout.friday_exercise_five_rest if @strengthworkout.friday_exercise_five_name?  %></td>
+									  <td><%= @strengthworkout.friday_exercise_five_tempo if @strengthworkout.friday_exercise_five_name?  %></td>
+                                      
+                                    </tr><% end %>
+                                    
+									<% if @strengthworkout.friday_exercise_six_name.present? %>
+                                    <tr>
+									  <td><%= @strengthworkout.friday_exercise_six_name if @strengthworkout.friday_exercise_six_name?  %></td>
+									  <td><%= @strengthworkout.friday_exercise_six_sets if @strengthworkout.friday_exercise_six_name?  %></td>
+									  <td><%= @strengthworkout.friday_exercise_six_reps if @strengthworkout.friday_exercise_six_name?  %></td>
+									  <td><%= @strengthworkout.friday_exercise_six_rest if @strengthworkout.friday_exercise_six_name?  %></td>
+									  <td><%= @strengthworkout.friday_exercise_six_tempo if @strengthworkout.friday_exercise_six_name?  %></td>
+                                      
+                                    </tr><% end %>
+                                    
+									<% if @strengthworkout.friday_exercise_seven_name.present? %>
+                                    <tr>
+									  <td><%= @strengthworkout.friday_exercise_seven_name if @strengthworkout.friday_exercise_seven_name?  %></td>
+									  <td><%= @strengthworkout.friday_exercise_seven_sets if @strengthworkout.friday_exercise_seven_name?  %></td>
+									  <td><%= @strengthworkout.friday_exercise_seven_reps if @strengthworkout.friday_exercise_seven_name?  %></td>
+									  <td><%= @strengthworkout.friday_exercise_seven_rest if @strengthworkout.friday_exercise_seven_name?  %></td>
+									  <td><%= @strengthworkout.friday_exercise_seven_tempo if @strengthworkout.friday_exercise_seven_name?  %></td>
+                                      
+                                    </tr><% end %>
+									
+									<% if @strengthworkout.friday_exercise_eight_name.present? %>
+                                    <tr>
+									  <td><%= @strengthworkout.friday_exercise_eight_name if @strengthworkout.friday_exercise_eight_name?  %></td>
+									  <td><%= @strengthworkout.friday_exercise_eight_sets if @strengthworkout.friday_exercise_eight_name?  %></td>
+									  <td><%= @strengthworkout.friday_exercise_eight_reps if @strengthworkout.friday_exercise_eight_name?  %></td>
+									  <td><%= @strengthworkout.friday_exercise_eight_rest if @strengthworkout.friday_exercise_eight_name?  %></td>
+									  <td><%= @strengthworkout.friday_exercise_eight_tempo if @strengthworkout.friday_exercise_eight_name?  %></td>
+                                      
+                                    </tr><% end %>
+                                  </tbody>
+                                  
+                                </table>
+                             </div>
+                             <div id="saturday" class="wo_day">
+                                <h4>Saturday</h4>
+								<h5><%= @strengthworkout.saturday_workout_description %></h5>
+								<% if @strengthworkout.saturday_exercise_one_name.present? %>
+                                <table class="table table-condensed">
+                                  <thead>
+                                    <tr>
+                                      <th>Exercise</th>
+                                      <th>Sets</th>
+                                      <th>Reps</th>
+                                      <th>Rest</th>
+                                      <th>Tempo</th>
+                                    </tr>
+                                  </thead><% end %>
+                                
+                                  <tbody>
+									  <% if @strengthworkout.saturday_exercise_one_name.present? %>
+                                    <tr>
+                                      <td><%= @strengthworkout.saturday_exercise_one_name if @strengthworkout.saturday_exercise_one_name?  %></td>
+                                      <td><%= @strengthworkout.saturday_exercise_one_sets if @strengthworkout.saturday_exercise_one_name?  %></td>
+                                      <td><%= @strengthworkout.saturday_exercise_one_reps if @strengthworkout.saturday_exercise_one_name?  %></td>
+                                      <td><%= @strengthworkout.saturday_exercise_one_rest if @strengthworkout.saturday_exercise_one_name?  %></td>
+                                      <td><%= @strengthworkout.saturday_exercise_one_tempo if @strengthworkout.saturday_exercise_one_name?  %></td>
+                                    </tr><% end %>
+									<% if @strengthworkout.saturday_exercise_two_name.present? %>
+                                    <tr>
+									  <td><%= @strengthworkout.saturday_exercise_two_name if @strengthworkout.saturday_exercise_two_name?  %></td>
+									  <td><%= @strengthworkout.saturday_exercise_two_sets if @strengthworkout.saturday_exercise_two_name?  %></td>
+									  <td><%= @strengthworkout.saturday_exercise_two_reps if @strengthworkout.saturday_exercise_two_name?  %></td>
+									  <td><%= @strengthworkout.saturday_exercise_two_rest if @strengthworkout.saturday_exercise_two_name?  %></td>
+									  <td><%= @strengthworkout.saturday_exercise_two_tempo if @strengthworkout.saturday_exercise_two_name?  %></td>
+                                      
+                                    </tr><% end %>
+									<% if @strengthworkout.saturday_exercise_three_name.present? %>
+                                    <tr>
+									  <td><%= @strengthworkout.saturday_exercise_three_name if @strengthworkout.saturday_exercise_three_name?  %></td>
+									  <td><%= @strengthworkout.saturday_exercise_three_sets if @strengthworkout.saturday_exercise_three_name?  %></td>
+									  <td><%= @strengthworkout.saturday_exercise_three_reps if @strengthworkout.saturday_exercise_three_name?  %></td>
+									  <td><%= @strengthworkout.saturday_exercise_three_rest if @strengthworkout.saturday_exercise_three_name?  %></td>
+									  <td><%= @strengthworkout.saturday_exercise_three_tempo if @strengthworkout.saturday_exercise_three_name?  %></td>
+                                      
+                                    </tr><% end %>
+                                    
+									<% if @strengthworkout.saturday_exercise_four_name.present? %>
+                                    <tr>
+									  <td><%= @strengthworkout.saturday_exercise_four_name if @strengthworkout.saturday_exercise_four_name?  %></td>
+									  <td><%= @strengthworkout.saturday_exercise_four_sets if @strengthworkout.saturday_exercise_four_name?  %></td>
+									  <td><%= @strengthworkout.saturday_exercise_four_reps if @strengthworkout.saturday_exercise_four_name?  %></td>
+									  <td><%= @strengthworkout.saturday_exercise_four_rest if @strengthworkout.saturday_exercise_four_name?  %></td>
+									  <td><%= @strengthworkout.saturday_exercise_four_tempo if @strengthworkout.saturday_exercise_four_name?  %></td>
+                                      
+                                    </tr><% end %>
+                                    
+									<% if @strengthworkout.saturday_exercise_five_name.present? %>
+                                    <tr>
+									  <td><%= @strengthworkout.saturday_exercise_five_name if @strengthworkout.saturday_exercise_five_name?  %></td>
+									  <td><%= @strengthworkout.saturday_exercise_five_sets if @strengthworkout.saturday_exercise_five_name?  %></td>
+									  <td><%= @strengthworkout.saturday_exercise_five_reps if @strengthworkout.saturday_exercise_five_name?  %></td>
+									  <td><%= @strengthworkout.saturday_exercise_five_rest if @strengthworkout.saturday_exercise_five_name?  %></td>
+									  <td><%= @strengthworkout.saturday_exercise_five_tempo if @strengthworkout.saturday_exercise_five_name?  %></td>
+                                      
+                                    </tr><% end %>
+                                    
+									<% if @strengthworkout.saturday_exercise_six_name.present? %>
+                                    <tr>
+									  <td><%= @strengthworkout.saturday_exercise_six_name if @strengthworkout.saturday_exercise_six_name?  %></td>
+									  <td><%= @strengthworkout.saturday_exercise_six_sets if @strengthworkout.saturday_exercise_six_name?  %></td>
+									  <td><%= @strengthworkout.saturday_exercise_six_reps if @strengthworkout.saturday_exercise_six_name?  %></td>
+									  <td><%= @strengthworkout.saturday_exercise_six_rest if @strengthworkout.saturday_exercise_six_name?  %></td>
+									  <td><%= @strengthworkout.saturday_exercise_six_tempo if @strengthworkout.saturday_exercise_six_name?  %></td>
+                                      
+                                    </tr><% end %>
+                                    
+									<% if @strengthworkout.saturday_exercise_seven_name.present? %>
+                                    <tr>
+									  <td><%= @strengthworkout.saturday_exercise_seven_name if @strengthworkout.saturday_exercise_seven_name?  %></td>
+									  <td><%= @strengthworkout.saturday_exercise_seven_sets if @strengthworkout.saturday_exercise_seven_name?  %></td>
+									  <td><%= @strengthworkout.saturday_exercise_seven_reps if @strengthworkout.saturday_exercise_seven_name?  %></td>
+									  <td><%= @strengthworkout.saturday_exercise_seven_rest if @strengthworkout.saturday_exercise_seven_name?  %></td>
+									  <td><%= @strengthworkout.saturday_exercise_seven_tempo if @strengthworkout.saturday_exercise_seven_name?  %></td>
+                                      
+                                    </tr><% end %>
+									
+									<% if @strengthworkout.saturday_exercise_eight_name.present? %>
+                                    <tr>
+									  <td><%= @strengthworkout.saturday_exercise_eight_name if @strengthworkout.saturday_exercise_eight_name?  %></td>
+									  <td><%= @strengthworkout.saturday_exercise_eight_sets if @strengthworkout.saturday_exercise_eight_name?  %></td>
+									  <td><%= @strengthworkout.saturday_exercise_eight_reps if @strengthworkout.saturday_exercise_eight_name?  %></td>
+									  <td><%= @strengthworkout.saturday_exercise_eight_rest if @strengthworkout.saturday_exercise_eight_name?  %></td>
+									  <td><%= @strengthworkout.saturday_exercise_eight_tempo if @strengthworkout.saturday_exercise_eight_name?  %></td>
+                                      
+                                    </tr><% end %>
+                                  </tbody>
+                                 
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div><!-- end #workout_show -->
+
+    
+       
+
+ 

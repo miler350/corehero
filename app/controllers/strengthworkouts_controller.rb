@@ -6,7 +6,9 @@ class StrengthworkoutsController < ApplicationController
 
  
   def show
-    #TODO
+    @workout = Workout.find(params[:workout_id])
+    @strengthworkout = @workout.strengthworkout
+    
   end
   
   def edit
