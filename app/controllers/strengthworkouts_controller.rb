@@ -10,13 +10,15 @@ class StrengthworkoutsController < ApplicationController
   end
   
   def edit
-    @workout = Workout.find(params[:id])
-    @strengthworkout = @workout.strengthworkout
+     @workout = Workout.find(params[:workout_id])
+    # @strengthworkout = @workout.strengthworkout
+     @strengthworkout = @workout.strengthworkout
   end
   
   def update
-   @workout = Workout.find(params[:id])
-   @strengthworkout = @workout.strengthworkout
+   @workout = Workout.find(params[:workout_id])
+   # @strengthworkout = @workout.strengthworkout
+    @strengthworkout = @workout.strengthworkout
    if @strengthworkout.update_attributes(strengthworkout_params)
      flash[:notice] = "Template has been customized."
      redirect_to workouts_path

@@ -57,7 +57,7 @@ class WorkoutsController < ApplicationController
   
   def choose_edit_path
     if Workout.strength_workouts.include? @workout.template
-      edit_strengthworkout_path(@strengthworkout)
+      edit_workout_strengthworkout_path(@workout)
     end
   end
   
