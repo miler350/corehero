@@ -11,12 +11,187 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130909023649) do
+ActiveRecord::Schema.define(version: 20130910235211) do
 
   create_table "cardioworkouts", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.date     "start_date"
+    t.string   "title"
+    t.integer  "days"
+    t.text     "description"
+    t.text     "monday_workout_description"
+    t.text     "tuesday_workout_description"
+    t.text     "wednesday_workout_description"
+    t.text     "thursday_workout_description"
+    t.text     "friday_workout_description"
+    t.text     "saturday_workout_description"
+    t.string   "monday_cardio_name"
+    t.string   "monday_cardio_level_1",         limit: 10
+    t.string   "monday_cardio_level_2",         limit: 10
+    t.string   "monday_cardio_level_3",         limit: 10
+    t.string   "monday_cardio_level_4",         limit: 10
+    t.string   "monday_cardio_level_5",         limit: 10
+    t.string   "monday_cardio_level_6",         limit: 10
+    t.string   "monday_cardio_level_7",         limit: 10
+    t.string   "monday_cardio_level_8",         limit: 10
+    t.string   "monday_cardio_level_9",         limit: 10
+    t.string   "monday_cardio_level_10",        limit: 10
+    t.string   "monday_cardio_level_11",        limit: 10
+    t.string   "monday_cardio_level_12",        limit: 10
+    t.string   "monday_cardio_level_13",        limit: 10
+    t.string   "monday_cardio_time_1",          limit: 4
+    t.string   "monday_cardio_time_2",          limit: 4
+    t.string   "monday_cardio_time_3",          limit: 4
+    t.string   "monday_cardio_time_4",          limit: 4
+    t.string   "monday_cardio_time_5",          limit: 4
+    t.string   "monday_cardio_time_6",          limit: 4
+    t.string   "monday_cardio_time_7",          limit: 4
+    t.string   "monday_cardio_time_8",          limit: 4
+    t.string   "monday_cardio_time_9",          limit: 4
+    t.string   "monday_cardio_time_10",         limit: 4
+    t.string   "monday_cardio_time_11",         limit: 4
+    t.string   "monday_cardio_time_12",         limit: 4
+    t.string   "monday_cardio_time_13",         limit: 4
+    t.string   "tuesday_cardio_name"
+    t.string   "tuesday_cardio_level_1",        limit: 10
+    t.string   "tuesday_cardio_level_2",        limit: 10
+    t.string   "tuesday_cardio_level_3",        limit: 10
+    t.string   "tuesday_cardio_level_4",        limit: 10
+    t.string   "tuesday_cardio_level_5",        limit: 10
+    t.string   "tuesday_cardio_level_6",        limit: 10
+    t.string   "tuesday_cardio_level_7",        limit: 10
+    t.string   "tuesday_cardio_level_8",        limit: 10
+    t.string   "tuesday_cardio_level_9",        limit: 10
+    t.string   "tuesday_cardio_level_10",       limit: 10
+    t.string   "tuesday_cardio_level_11",       limit: 10
+    t.string   "tuesday_cardio_level_12",       limit: 10
+    t.string   "tuesday_cardio_level_13",       limit: 10
+    t.string   "tuesday_cardio_time_1",         limit: 4
+    t.string   "tuesday_cardio_time_2",         limit: 4
+    t.string   "tuesday_cardio_time_3",         limit: 4
+    t.string   "tuesday_cardio_time_4",         limit: 4
+    t.string   "tuesday_cardio_time_5",         limit: 4
+    t.string   "tuesday_cardio_time_6",         limit: 4
+    t.string   "tuesday_cardio_time_7",         limit: 4
+    t.string   "tuesday_cardio_time_8",         limit: 4
+    t.string   "tuesday_cardio_time_9",         limit: 4
+    t.string   "tuesday_cardio_time_10",        limit: 4
+    t.string   "tuesday_cardio_time_11",        limit: 4
+    t.string   "tuesday_cardio_time_12",        limit: 4
+    t.string   "tuesday_cardio_time_13",        limit: 4
+    t.string   "wednesday_cardio_name"
+    t.string   "wednesday_cardio_level_1",      limit: 10
+    t.string   "wednesday_cardio_level_2",      limit: 10
+    t.string   "wednesday_cardio_level_3",      limit: 10
+    t.string   "wednesday_cardio_level_4",      limit: 10
+    t.string   "wednesday_cardio_level_5",      limit: 10
+    t.string   "wednesday_cardio_level_6",      limit: 10
+    t.string   "wednesday_cardio_level_7",      limit: 10
+    t.string   "wednesday_cardio_level_8",      limit: 10
+    t.string   "wednesday_cardio_level_9",      limit: 10
+    t.string   "wednesday_cardio_level_10",     limit: 10
+    t.string   "wednesday_cardio_level_11",     limit: 10
+    t.string   "wednesday_cardio_level_12",     limit: 10
+    t.string   "wednesday_cardio_level_13",     limit: 10
+    t.string   "wednesday_cardio_time_1",       limit: 4
+    t.string   "wednesday_cardio_time_2",       limit: 4
+    t.string   "wednesday_cardio_time_3",       limit: 4
+    t.string   "wednesday_cardio_time_4",       limit: 4
+    t.string   "wednesday_cardio_time_5",       limit: 4
+    t.string   "wednesday_cardio_time_6",       limit: 4
+    t.string   "wednesday_cardio_time_7",       limit: 4
+    t.string   "wednesday_cardio_time_8",       limit: 4
+    t.string   "wednesday_cardio_time_9",       limit: 4
+    t.string   "wednesday_cardio_time_10",      limit: 4
+    t.string   "wednesday_cardio_time_11",      limit: 4
+    t.string   "wednesday_cardio_time_12",      limit: 4
+    t.string   "wednesday_cardio_time_13",      limit: 4
+    t.string   "thursday_cardio_name"
+    t.string   "thursday_cardio_level_1",       limit: 10
+    t.string   "thursday_cardio_level_2",       limit: 10
+    t.string   "thursday_cardio_level_3",       limit: 10
+    t.string   "thursday_cardio_level_4",       limit: 10
+    t.string   "thursday_cardio_level_5",       limit: 10
+    t.string   "thursday_cardio_level_6",       limit: 10
+    t.string   "thursday_cardio_level_7",       limit: 10
+    t.string   "thursday_cardio_level_8",       limit: 10
+    t.string   "thursday_cardio_level_9",       limit: 10
+    t.string   "thursday_cardio_level_10",      limit: 10
+    t.string   "thursday_cardio_level_11",      limit: 10
+    t.string   "thursday_cardio_level_12",      limit: 10
+    t.string   "thursday_cardio_level_13",      limit: 10
+    t.string   "thursday_cardio_time_1",        limit: 4
+    t.string   "thursday_cardio_time_2",        limit: 4
+    t.string   "thursday_cardio_time_3",        limit: 4
+    t.string   "thursday_cardio_time_4",        limit: 4
+    t.string   "thursday_cardio_time_5",        limit: 4
+    t.string   "thursday_cardio_time_6",        limit: 4
+    t.string   "thursday_cardio_time_7",        limit: 4
+    t.string   "thursday_cardio_time_8",        limit: 4
+    t.string   "thursday_cardio_time_9",        limit: 4
+    t.string   "thursday_cardio_time_10",       limit: 4
+    t.string   "thursday_cardio_time_11",       limit: 4
+    t.string   "thursday_cardio_time_12",       limit: 4
+    t.string   "thursday_cardio_time_13",       limit: 4
+    t.string   "friday_cardio_name"
+    t.string   "friday_cardio_level_1",         limit: 10
+    t.string   "friday_cardio_level_2",         limit: 10
+    t.string   "friday_cardio_level_3",         limit: 10
+    t.string   "friday_cardio_level_4",         limit: 10
+    t.string   "friday_cardio_level_5",         limit: 10
+    t.string   "friday_cardio_level_6",         limit: 10
+    t.string   "friday_cardio_level_7",         limit: 10
+    t.string   "friday_cardio_level_8",         limit: 10
+    t.string   "friday_cardio_level_9",         limit: 10
+    t.string   "friday_cardio_level_10",        limit: 10
+    t.string   "friday_cardio_level_11",        limit: 10
+    t.string   "friday_cardio_level_12",        limit: 10
+    t.string   "friday_cardio_level_13",        limit: 10
+    t.string   "friday_cardio_time_1",          limit: 4
+    t.string   "friday_cardio_time_2",          limit: 4
+    t.string   "friday_cardio_time_3",          limit: 4
+    t.string   "friday_cardio_time_4",          limit: 4
+    t.string   "friday_cardio_time_5",          limit: 4
+    t.string   "friday_cardio_time_6",          limit: 4
+    t.string   "friday_cardio_time_7",          limit: 4
+    t.string   "friday_cardio_time_8",          limit: 4
+    t.string   "friday_cardio_time_9",          limit: 4
+    t.string   "friday_cardio_time_10",         limit: 4
+    t.string   "friday_cardio_time_11",         limit: 4
+    t.string   "friday_cardio_time_12",         limit: 4
+    t.string   "friday_cardio_time_13",         limit: 4
+    t.string   "saturday_cardio_name"
+    t.string   "saturday_cardio_level_1",       limit: 10
+    t.string   "saturday_cardio_level_2",       limit: 10
+    t.string   "saturday_cardio_level_3",       limit: 10
+    t.string   "saturday_cardio_level_4",       limit: 10
+    t.string   "saturday_cardio_level_5",       limit: 10
+    t.string   "saturday_cardio_level_6",       limit: 10
+    t.string   "saturday_cardio_level_7",       limit: 10
+    t.string   "saturday_cardio_level_8",       limit: 10
+    t.string   "saturday_cardio_level_9",       limit: 10
+    t.string   "saturday_cardio_level_10",      limit: 10
+    t.string   "saturday_cardio_level_11",      limit: 10
+    t.string   "saturday_cardio_level_12",      limit: 10
+    t.string   "saturday_cardio_level_13",      limit: 10
+    t.string   "saturday_cardio_time_1",        limit: 4
+    t.string   "saturday_cardio_time_2",        limit: 4
+    t.string   "saturday_cardio_time_3",        limit: 4
+    t.string   "saturday_cardio_time_4",        limit: 4
+    t.string   "saturday_cardio_time_5",        limit: 4
+    t.string   "saturday_cardio_time_6",        limit: 4
+    t.string   "saturday_cardio_time_7",        limit: 4
+    t.string   "saturday_cardio_time_8",        limit: 4
+    t.string   "saturday_cardio_time_9",        limit: 4
+    t.string   "saturday_cardio_time_10",       limit: 4
+    t.string   "saturday_cardio_time_11",       limit: 4
+    t.string   "saturday_cardio_time_12",       limit: 4
+    t.string   "saturday_cardio_time_13",       limit: 4
+    t.integer  "workout_id"
   end
+
+  add_index "cardioworkouts", ["workout_id"], name: "index_cardioworkouts_on_workout_id", using: :btree
 
   create_table "issuances", force: true do |t|
     t.integer  "user_id"

@@ -2,6 +2,7 @@ class Workout < ActiveRecord::Base
   has_many :issuances
   has_many :users, through: :issuances
   has_one :strengthworkout
+  has_one :cardioworkout
   
   
   
@@ -13,6 +14,10 @@ class Workout < ActiveRecord::Base
   
   def self.strength_workouts
     STRENGTH_WORKOUTS
+  end
+  
+  def self.cardio_workouts
+    CARDIO_WORKOUTS
   end
   
 end

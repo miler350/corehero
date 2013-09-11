@@ -1,0 +1,326 @@
+<%= form_for [@workout, @cardioworkout] do |f| %>
+    <div id="weekly_workout" class="create_workout" style="padding-top: 20px;">
+        <div class="container">
+            <div class="row">
+                    
+                        <fieldset>
+                        <!-- Form Name -->
+
+                            <div class="wo_header">
+                                <div class="wo_title">
+                                    <label>Title</label>
+									<%= f.text_field :title, type: "text", placeholder: "", class: "span4" %>
+                                </div>
+                                <div class="wo_days">
+                                    <label>Days</label>
+									<%= f.text_field :days, type: "text", placeholder: "", class: "span1" %>
+                                </div>
+                                <div class="wo_goals">
+                                    <label>Description</label>
+									<%= f.text_field :description, type: "text", placeholder: "", class: "span5" %>
+                                </div>
+                            </div>
+                            <hr/>
+                            <div id="monday" class="wo_day">
+                                <h4>Monday</h4>
+                                    <div class="control-group">
+                                      <div class="controls">
+                                        <h5>Describe this workout...</h5>
+										<%= f.text_field :monday_workout_description, type: "text", placeholder: "", class: "span4" %>
+                                      </div>
+                                    </div>
+                                <div class="cardio_training">
+                                        <h5>Enter cardio training workout...</h5>
+                                        <!-- Select Basic -->
+                                        <div class="control-group">
+                                                <div class="controls cardio_exercise">
+                                                    <input type="text"style="margin: 0 auto;" data-provide="typeahead" data-items="4" data-source='["Treadmill","PreCor","Rower", "Spin Bike", "Stationary Bike"]'>
+                                                </div>
+                                                <div class="controls">
+													<%= f.text_field :monday_cardio_level_1, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :monday_cardio_level_2, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :monday_cardio_level_3, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :monday_cardio_level_4, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :monday_cardio_level_5, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :monday_cardio_level_6, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :monday_cardio_level_7, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :monday_cardio_level_8, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :monday_cardio_level_9, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :monday_cardio_level_10, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :monday_cardio_level_11, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :monday_cardio_level_12, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :monday_cardio_level_13, type: "text", placeholder: "Level", class: "span1" %>
+                                                </div>
+                                                 <div class="controls">
+                                                    <%= f.text_field :monday_cardio_time_1, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :monday_cardio_time_2, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :monday_cardio_time_3, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :monday_cardio_time_4, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :monday_cardio_time_5, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :monday_cardio_time_6, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :monday_cardio_time_7, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :monday_cardio_time_8, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :monday_cardio_time_9, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :monday_cardio_time_10, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :monday_cardio_time_11, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :monday_cardio_time_12, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :monday_cardio_time_13, type: "text", placeholder: "Time", class: "span1" %>
+                                                </div>
+                                         </div>
+                                </div><!-- End cardio_training / -->
+                                         
+                                </div><!-- End #monday / -->
+                                <div id="tuesday" class="wo_day">
+                                    <h4>Tuesday</h4>
+                                    <div class="control-group">
+                                      <div class="controls">
+                                        <h5>Describe this workout...</h5>
+                                        <%= f.text_field :tuesday_workout_description, type: "text", placeholder: "", class: "span4" %>
+                                      </div>
+                                    </div>
+                                    <div class="cardio_training">
+                                        <h5>Enter cardio training workout...</h5>
+                                        <!-- Select Basic -->
+                                        <div class="control-group">
+                                                <div class="controls cardio_exercise">
+                                                    <input type="text"style="margin: 0 auto;" data-provide="typeahead" data-items="4" data-source='["Standing Hamstring Curls","Alaska","Arizona"]'>
+                                                </div>
+                                                <div class="controls">
+													<%= f.text_field :tuesday_cardio_level_1, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :tuesday_cardio_level_2, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :tuesday_cardio_level_3, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :tuesday_cardio_level_4, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :tuesday_cardio_level_5, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :tuesday_cardio_level_6, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :tuesday_cardio_level_7, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :tuesday_cardio_level_8, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :tuesday_cardio_level_9, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :tuesday_cardio_level_10, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :tuesday_cardio_level_11, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :tuesday_cardio_level_12, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :tuesday_cardio_level_13, type: "text", placeholder: "Level", class: "span1" %>
+                                                </div>
+                                                 <div class="controls">
+                                                    <%= f.text_field :tuesday_cardio_time_1, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :tuesday_cardio_time_2, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :tuesday_cardio_time_3, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :tuesday_cardio_time_4, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :tuesday_cardio_time_5, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :tuesday_cardio_time_6, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :tuesday_cardio_time_7, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :tuesday_cardio_time_8, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :tuesday_cardio_time_9, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :tuesday_cardio_time_10, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :tuesday_cardio_time_11, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :tuesday_cardio_time_12, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :tuesday_cardio_time_13, type: "text", placeholder: "Time", class: "span1" %>
+                                                </div> 
+                                         </div>
+                                </div><!-- End cardio_training / -->
+                                    
+                             </div>
+                             <div id="wednesday" class="wo_day">
+                                <h4>Wednesday</h4>
+                                   <div class="control-group">
+                                      <div class="controls">
+                                        <h5>Describe this workout...</h5>
+                                        <%= f.text_field :wednesday_workout_description, type: "text", placeholder: "", class: "span4" %>
+                                      </div>
+                                    </div>
+                                    <div class="cardio_training">
+                                        <h5>Enter cardio training workout...</h5>
+                                        <!-- Select Basic -->
+                                        <div class="control-group">
+                                                <div class="controls cardio_exercise">
+                                                    <input type="text"style="margin: 0 auto;" data-provide="typeahead" data-items="4" data-source='["Standing Hamstring Curls","Alaska","Arizona"]'>
+                                                </div>
+                                                <div class="controls">
+													<%= f.text_field :wednesday_cardio_level_1, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :wednesday_cardio_level_2, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :wednesday_cardio_level_3, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :wednesday_cardio_level_4, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :wednesday_cardio_level_5, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :wednesday_cardio_level_6, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :wednesday_cardio_level_7, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :wednesday_cardio_level_8, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :wednesday_cardio_level_9, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :wednesday_cardio_level_10, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :wednesday_cardio_level_11, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :wednesday_cardio_level_12, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :wednesday_cardio_level_13, type: "text", placeholder: "Level", class: "span1" %>
+                                                </div>
+                                                 <div class="controls">
+                                                    <%= f.text_field :wednesday_cardio_time_1, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :wednesday_cardio_time_2, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :wednesday_cardio_time_3, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :wednesday_cardio_time_4, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :wednesday_cardio_time_5, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :wednesday_cardio_time_6, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :wednesday_cardio_time_7, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :wednesday_cardio_time_8, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :wednesday_cardio_time_9, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :wednesday_cardio_time_10, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :wednesday_cardio_time_11, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :wednesday_cardio_time_12, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :wednesday_cardio_time_13, type: "text", placeholder: "Time", class: "span1" %>
+                                                </div>  
+                                         </div>
+                                </div><!-- End cardio_training / -->
+                            </div>
+                            <div id="thursday" class="wo_day">
+                                <h4>Thursday</h4>
+                                    <div class="control-group">
+                                      <div class="controls">
+                                        <h5>Describe this workout...</h5>
+                                        <%= f.text_field :thursday_workout_description, type: "text", placeholder: "", class: "span4" %>
+                                      </div>
+                                    </div>
+                                    <div class="cardio_training">
+                                        <h5>Enter cardio training workout...</h5>
+                                        <!-- Select Basic -->
+                                        <div class="control-group">
+                                                <div class="controls cardio_exercise">
+                                                    <input type="text"style="margin: 0 auto;" data-provide="typeahead" data-items="4" data-source='["Standing Hamstring Curls","Alaska","Arizona"]'>
+                                                </div>
+                                                <div class="controls">
+													<%= f.text_field :thursday_cardio_level_1, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :thursday_cardio_level_2, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :thursday_cardio_level_3, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :thursday_cardio_level_4, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :thursday_cardio_level_5, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :thursday_cardio_level_6, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :thursday_cardio_level_7, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :thursday_cardio_level_8, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :thursday_cardio_level_9, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :thursday_cardio_level_10, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :thursday_cardio_level_11, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :thursday_cardio_level_12, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :thursday_cardio_level_13, type: "text", placeholder: "Level", class: "span1" %>
+                                                </div>
+                                                 <div class="controls">
+                                                    <%= f.text_field :thursday_cardio_time_1, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :thursday_cardio_time_2, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :thursday_cardio_time_3, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :thursday_cardio_time_4, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :thursday_cardio_time_5, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :thursday_cardio_time_6, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :thursday_cardio_time_7, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :thursday_cardio_time_8, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :thursday_cardio_time_9, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :thursday_cardio_time_10, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :thursday_cardio_time_11, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :thursday_cardio_time_12, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :thursday_cardio_time_13, type: "text", placeholder: "Time", class: "span1" %>
+                                                </div> 
+                                         </div>
+                                </div><!-- End cardio_training / -->
+                                </div><!-- End #monday / -->
+                                <div id="friday" class="wo_day">
+                                <h4>Friday</h4>
+                                    <div class="control-group">
+                                      <div class="controls">
+                                        <h5>Describe this workout...</h5>
+                                        <%= f.text_field :friday_workout_description, type: "text", placeholder: "", class: "span4" %>
+                                      </div>
+                                    </div>
+                                    <div class="cardio_training">
+                                        <h5>Enter cardio training workout...</h5>
+                                        <!-- Select Basic -->
+                                        <div class="control-group">
+                                                <div class="controls cardio_exercise">
+                                                    <input type="text"style="margin: 0 auto;" data-provide="typeahead" data-items="4" data-source='["Standing Hamstring Curls","Alaska","Arizona"]'>
+                                                </div>
+                                                <div class="controls">
+													<%= f.text_field :friday_cardio_level_1, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :friday_cardio_level_2, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :friday_cardio_level_3, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :friday_cardio_level_4, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :friday_cardio_level_5, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :friday_cardio_level_6, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :friday_cardio_level_7, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :friday_cardio_level_8, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :friday_cardio_level_9, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :friday_cardio_level_10, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :friday_cardio_level_11, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :friday_cardio_level_12, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :friday_cardio_level_13, type: "text", placeholder: "Level", class: "span1" %>
+                                                </div>
+                                                 <div class="controls">
+                                                    <%= f.text_field :friday_cardio_time_1, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :friday_cardio_time_2, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :friday_cardio_time_3, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :friday_cardio_time_4, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :friday_cardio_time_5, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :friday_cardio_time_6, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :friday_cardio_time_7, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :friday_cardio_time_8, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :friday_cardio_time_9, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :friday_cardio_time_10, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :friday_cardio_time_11, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :friday_cardio_time_12, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :friday_cardio_time_13, type: "text", placeholder: "Time", class: "span1" %>
+                                                </div> 
+                                         </div>
+                                </div><!-- End cardio_training / -->
+                             </div>
+                             <div id="saturday" class="wo_day">
+                                <h4>Saturday</h4>
+                                    <div class="control-group">
+                                      <div class="controls">
+                                        <h5>Describe this workout...</h5>
+                                        <%= f.text_field :saturday_workout_description, type: "text", placeholder: "", class: "span4" %>
+                                      </div>
+                                    </div>
+                                    <div class="cardio_training">
+                                        <h5>Enter cardio training workout...</h5>
+                                        <!-- Select Basic -->
+                                        <div class="control-group">
+                                                <div class="controls cardio_exercise">
+                                                    <input type="text"style="margin: 0 auto;" data-provide="typeahead" data-items="4" data-source='["Standing Hamstring Curls","Alaska","Arizona"]'>
+                                                </div>
+                                                <div class="controls">
+													<%= f.text_field :saturday_cardio_level_1, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :saturday_cardio_level_2, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :saturday_cardio_level_3, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :saturday_cardio_level_4, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :saturday_cardio_level_5, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :saturday_cardio_level_6, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :saturday_cardio_level_7, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :saturday_cardio_level_8, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :saturday_cardio_level_9, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :saturday_cardio_level_10, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :saturday_cardio_level_11, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :saturday_cardio_level_12, type: "text", placeholder: "Level", class: "span1" %>
+													<%= f.text_field :saturday_cardio_level_13, type: "text", placeholder: "Level", class: "span1" %>
+                                                </div>
+                                                 <div class="controls">
+                                                    <%= f.text_field :saturday_cardio_time_1, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :saturday_cardio_time_2, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :saturday_cardio_time_3, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :saturday_cardio_time_4, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :saturday_cardio_time_5, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :saturday_cardio_time_6, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :saturday_cardio_time_7, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :saturday_cardio_time_8, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :saturday_cardio_time_9, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :saturday_cardio_time_10, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :saturday_cardio_time_11, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :saturday_cardio_time_12, type: "text", placeholder: "Time", class: "span1" %>
+                                                    <%= f.text_field :saturday_cardio_time_13, type: "text", placeholder: "Time", class: "span1" %>
+                                                </div> 
+                                         </div>
+                                </div><!-- End cardio_training / --><%= f.submit "Customize", :class => "btn btn-large btn-warning"  %>
+
+                                        
+                            </div>
+                        </div>
+                    </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    
+		<% end %>
+
+   

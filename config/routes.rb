@@ -1,9 +1,9 @@
 CoreheroFirst::Application.routes.draw do
   resources :workouts do 
-    resource :strengthworkout do
-      post '/strengthworkouts/:id/edit', to: 'strengthworkouts#edit'
+    resource :strengthworkout
+    resource :cardioworkout
     end
-  end
+ 
 
   devise_for :users do
     get "/users/sign_out" => "devise/sessions#destroy"

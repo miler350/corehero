@@ -1,0 +1,280 @@
+
+
+     <div id="show_workout">
+        <div id="section_header">
+            <div class="container">
+                <div class="row">
+                    <div class="wo_header">
+                        <div class="wo_title">
+                            <h5>Title</h5>
+                            <h2><%= @cardioworkout.start_date %> - <%= @cardioworkout.title %></h2>
+                        </div>
+                        <div class="wo_days">
+                            <h5>Days</h5>
+                            <p class="lead"><%= @cardioworkout.days %>d / Week</p>
+                        </div>
+                        <div class="wo_goals">
+                            <h5>Keyword Tags</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="weekly_workout cardio_training">
+        <div class="container">
+            <div class="row">
+				            <% if (@cardioworkout.monday_cardio_level_1 || @cardioworkout.monday_cardio_time_1).present? %>
+                            <div id="monday" class="wo_day">
+                                <h4>Monday</h4>
+                                <h5><%= @cardioworkout.monday_cardio_name %></h5>
+                                <table class="table table-condensed">
+                                  <thead>
+                                    <tr>
+                                      <th colspan=20>Treadmill</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <th>mph/level/speed</th>
+                                      <td><%= @cardioworkout.monday_cardio_level_1 %></td>
+                                      <td><%= @cardioworkout.monday_cardio_level_2 %></td>
+                                      <td><%= @cardioworkout.monday_cardio_level_3 %></td>
+                                      <td><%= @cardioworkout.monday_cardio_level_4 %></td>
+                                      <td><%= @cardioworkout.monday_cardio_level_5 %></td>
+                                      <td><%= @cardioworkout.monday_cardio_level_6 %></td>
+                                      <td><%= @cardioworkout.monday_cardio_level_7 %></td>
+                                      <td><%= @cardioworkout.monday_cardio_level_8 %></td>
+                                      <td><%= @cardioworkout.monday_cardio_level_9 %></td>
+                                      <td><%= @cardioworkout.monday_cardio_level_10 %></td>
+                                    </tr>
+                                    <tr>
+                                      <th>Time</th>
+                                      <td><%= minutes(@cardioworkout.monday_cardio_time_1) %></td>
+                                      <td><%= minutes(@cardioworkout.monday_cardio_time_2) %></td>
+                                      <td><%= minutes(@cardioworkout.monday_cardio_time_3) %></td>
+                                      <td><%= minutes(@cardioworkout.monday_cardio_time_4) %></td>
+                                      <td><%= minutes(@cardioworkout.monday_cardio_time_5) %></td>
+                                      <td><%= minutes(@cardioworkout.monday_cardio_time_6) %></td>
+                                      <td><%= minutes(@cardioworkout.monday_cardio_time_7) %></td>
+                                      <td><%= minutes(@cardioworkout.monday_cardio_time_8) %></td>
+                                      <td><%= minutes(@cardioworkout.monday_cardio_time_9) %></td>
+                                      <td><%= minutes(@cardioworkout.monday_cardio_time_10) %></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                            </div><!-- End #monday / --><% end %>
+							
+							<% if (@cardioworkout.tuesday_cardio_level_1 || @cardioworkout.tuesday_cardio_time_1).present? %>
+                                <div id="tuesday" class="wo_day">
+                                    <h4>Tuesday</h4>
+                                <h5><%= @cardioworkout.tuesday_cardio_name %></h5>
+                                <table class="table table-condensed">
+                                  <thead>
+                                    <tr>
+                                      <th colspan=20>Treadmill</th>
+                                    </tr>
+                                  </thead>
+                                 <tbody>
+                                    <tr>
+                                      <th>mph/level/speed</th>
+                                      <td><%= @cardioworkout.tuesday_cardio_level_1 %></td>
+                                      <td><%= @cardioworkout.tuesday_cardio_level_2 %></td>
+                                      <td><%= @cardioworkout.tuesday_cardio_level_3 %></td>
+                                      <td><%= @cardioworkout.tuesday_cardio_level_4 %></td>
+                                      <td><%= @cardioworkout.tuesday_cardio_level_5 %></td>
+                                      <td><%= @cardioworkout.tuesday_cardio_level_6 %></td>
+                                      <td><%= @cardioworkout.tuesday_cardio_level_7 %></td>
+                                      <td><%= @cardioworkout.tuesday_cardio_level_8 %></td>
+                                      <td><%= @cardioworkout.tuesday_cardio_level_9 %></td>
+                                      <td><%= @cardioworkout.tuesday_cardio_level_10 %></td>
+                                    </tr>
+                                    <tr>
+                                      <th>Time</th>
+                                      <td><%= minutes(@cardioworkout.tuesday_cardio_time_1) %></td>
+                                      <td><%= minutes(@cardioworkout.tuesday_cardio_time_2) %></td>
+                                      <td><%= minutes(@cardioworkout.tuesday_cardio_time_3) %></td>
+                                      <td><%= minutes(@cardioworkout.tuesday_cardio_time_4) %></td>
+                                      <td><%= minutes(@cardioworkout.tuesday_cardio_time_5) %></td>
+                                      <td><%= minutes(@cardioworkout.tuesday_cardio_time_6) %></td>
+                                      <td><%= minutes(@cardioworkout.tuesday_cardio_time_7) %></td>
+                                      <td><%= minutes(@cardioworkout.tuesday_cardio_time_8) %></td>
+                                      <td><%= minutes(@cardioworkout.tuesday_cardio_time_9) %></td>
+                                      <td><%= minutes(@cardioworkout.tuesday_cardio_time_10) %></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                             </div><% end %>
+							 
+							 <% if (@cardioworkout.wednesday_cardio_level_1 || @cardioworkout.wednesday_cardio_time_1).present? %>
+                             <div id="wednesday" class="wo_day">
+                                <h4>Wednesday</h4>
+                                <h5><%= @cardioworkout.wednesday_cardio_name %></h5>
+                                <table class="table table-condensed">
+                                  <thead>
+                                    <tr>
+                                      <th colspan=20>Treadmill</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <th>mph/level/speed</th>
+                                      <td><%= @cardioworkout.wednesday_cardio_level_1 %></td>
+                                      <td><%= @cardioworkout.wednesday_cardio_level_2 %></td>
+                                      <td><%= @cardioworkout.wednesday_cardio_level_3 %></td>
+                                      <td><%= @cardioworkout.wednesday_cardio_level_4 %></td>
+                                      <td><%= @cardioworkout.wednesday_cardio_level_5 %></td>
+                                      <td><%= @cardioworkout.wednesday_cardio_level_6 %></td>
+                                      <td><%= @cardioworkout.wednesday_cardio_level_7 %></td>
+                                      <td><%= @cardioworkout.wednesday_cardio_level_8 %></td>
+                                      <td><%= @cardioworkout.wednesday_cardio_level_9 %></td>
+                                      <td><%= @cardioworkout.wednesday_cardio_level_10 %></td>
+                                    </tr>
+                                    <tr>
+                                      <th>Time</th>
+                                      <td><%= minutes(@cardioworkout.wednesday_cardio_time_1) %></td>
+                                      <td><%= minutes(@cardioworkout.wednesday_cardio_time_2) %></td>
+                                      <td><%= minutes(@cardioworkout.wednesday_cardio_time_3) %></td>
+                                      <td><%= minutes(@cardioworkout.wednesday_cardio_time_4) %></td>
+                                      <td><%= minutes(@cardioworkout.wednesday_cardio_time_5) %></td>
+                                      <td><%= minutes(@cardioworkout.wednesday_cardio_time_6) %></td>
+                                      <td><%= minutes(@cardioworkout.wednesday_cardio_time_7) %></td>
+                                      <td><%= minutes(@cardioworkout.wednesday_cardio_time_8) %></td>
+                                      <td><%= minutes(@cardioworkout.wednesday_cardio_time_9) %></td>
+                                      <td><%= minutes(@cardioworkout.wednesday_cardio_time_10) %></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                            </div><% end %>
+							
+							<% if (@cardioworkout.thursday_cardio_level_1 || @cardioworkout.thursday_cardio_time_1).present? %>
+                            <div id="thursday" class="wo_day">
+                                <h4>Thursday</h4>
+                                <h5><%= @cardioworkout.thursday_cardio_name %></h5>
+                                <table class="table table-condensed">
+                                  <thead>
+                                    <tr>
+                                      <th colspan=20>Treadmill</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <th>mph/level/speed</th>
+                                      <td><%= @cardioworkout.thursday_cardio_level_1 %></td>
+                                      <td><%= @cardioworkout.thursday_cardio_level_2 %></td>
+                                      <td><%= @cardioworkout.thursday_cardio_level_3 %></td>
+                                      <td><%= @cardioworkout.thursday_cardio_level_4 %></td>
+                                      <td><%= @cardioworkout.thursday_cardio_level_5 %></td>
+                                      <td><%= @cardioworkout.thursday_cardio_level_6 %></td>
+                                      <td><%= @cardioworkout.thursday_cardio_level_7 %></td>
+                                      <td><%= @cardioworkout.thursday_cardio_level_8 %></td>
+                                      <td><%= @cardioworkout.thursday_cardio_level_9 %></td>
+                                      <td><%= @cardioworkout.thursday_cardio_level_10 %></td>
+                                    </tr>
+                                    <tr>
+                                      <th>Time</th>
+                                      <td><%= minutes(@cardioworkout.thursday_cardio_time_1) %></td>
+                                      <td><%= minutes(@cardioworkout.thursday_cardio_time_2) %></td>
+                                      <td><%= minutes(@cardioworkout.thursday_cardio_time_3) %></td>
+                                      <td><%= minutes(@cardioworkout.thursday_cardio_time_4) %></td>
+                                      <td><%= minutes(@cardioworkout.thursday_cardio_time_5) %></td>
+                                      <td><%= minutes(@cardioworkout.thursday_cardio_time_6) %></td>
+                                      <td><%= minutes(@cardioworkout.thursday_cardio_time_7) %></td>
+                                      <td><%= minutes(@cardioworkout.thursday_cardio_time_8) %></td>
+                                      <td><%= minutes(@cardioworkout.thursday_cardio_time_9) %></td>
+                                      <td><%= minutes(@cardioworkout.thursday_cardio_time_10) %></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                </div><!-- End #monday / --><% end %>
+								
+								<% if (@cardioworkout.friday_cardio_level_1 || @cardioworkout.friday_cardio_time_1).present? %>
+                                <div id="friday" class="wo_day">
+                                <h4>Friday</h4>
+                                <h5><%= @cardioworkout.friday_cardio_name %></h5>
+                                <table class="table table-condensed">
+                                  <thead>
+                                    <tr>
+                                      <th colspan=20>Treadmill</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <th>mph/level/speed</th>
+                                      <td><%= @cardioworkout.friday_cardio_level_1 %></td>
+                                      <td><%= @cardioworkout.friday_cardio_level_2 %></td>
+                                      <td><%= @cardioworkout.friday_cardio_level_3 %></td>
+                                      <td><%= @cardioworkout.friday_cardio_level_4 %></td>
+                                      <td><%= @cardioworkout.friday_cardio_level_5 %></td>
+                                      <td><%= @cardioworkout.friday_cardio_level_6 %></td>
+                                      <td><%= @cardioworkout.friday_cardio_level_7 %></td>
+                                      <td><%= @cardioworkout.friday_cardio_level_8 %></td>
+                                      <td><%= @cardioworkout.friday_cardio_level_9 %></td>
+                                      <td><%= @cardioworkout.friday_cardio_level_10 %></td>
+                                    </tr>
+                                    <tr>
+                                      <th>Time</th>
+                                      <td><%= minutes(@cardioworkout.friday_cardio_time_1) %></td>
+                                      <td><%= minutes(@cardioworkout.friday_cardio_time_2) %></td>
+                                      <td><%= minutes(@cardioworkout.friday_cardio_time_3) %></td>
+                                      <td><%= minutes(@cardioworkout.friday_cardio_time_4) %></td>
+                                      <td><%= minutes(@cardioworkout.friday_cardio_time_5) %></td>
+                                      <td><%= minutes(@cardioworkout.friday_cardio_time_6) %></td>
+                                      <td><%= minutes(@cardioworkout.friday_cardio_time_7) %></td>
+                                      <td><%= minutes(@cardioworkout.friday_cardio_time_8) %></td>
+                                      <td><%= minutes(@cardioworkout.friday_cardio_time_9) %></td>
+                                      <td><%= minutes(@cardioworkout.friday_cardio_time_10) %></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                             </div><% end %>
+							 
+							 
+							 <% if (@cardioworkout.saturday_cardio_level_1 || @cardioworkout.saturday_cardio_time_1).present? %>
+                             <div id="saturday" class="wo_day">
+                                <h4>Saturday</h4>
+                                <h5><%= @cardioworkout.saturday_cardio_name %></h5>
+                                <table class="table table-condensed">
+                                  <thead>
+                                    <tr>
+                                      <th colspan=20>Treadmill</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <th>mph/level/speed</th>
+                                      <td><%= @cardioworkout.saturday_cardio_level_1 %></td>
+                                      <td><%= @cardioworkout.saturday_cardio_level_2 %></td>
+                                      <td><%= @cardioworkout.saturday_cardio_level_3 %></td>
+                                      <td><%= @cardioworkout.saturday_cardio_level_4 %></td>
+                                      <td><%= @cardioworkout.saturday_cardio_level_5 %></td>
+                                      <td><%= @cardioworkout.saturday_cardio_level_6 %></td>
+                                      <td><%= @cardioworkout.saturday_cardio_level_7 %></td>
+                                      <td><%= @cardioworkout.saturday_cardio_level_8 %></td>
+                                      <td><%= @cardioworkout.saturday_cardio_level_9 %></td>
+                                      <td><%= @cardioworkout.saturday_cardio_level_10 %></td>
+                                    </tr>
+                                    <tr>
+                                      <th>Time</th>
+                                      <td><%= minutes(@cardioworkout.saturday_cardio_time_1) %></td>
+                                      <td><%= minutes(@cardioworkout.saturday_cardio_time_2) %></td>
+                                      <td><%= minutes(@cardioworkout.saturday_cardio_time_3) %></td>
+                                      <td><%= minutes(@cardioworkout.saturday_cardio_time_4) %></td>
+                                      <td><%= minutes(@cardioworkout.saturday_cardio_time_5) %></td>
+                                      <td><%= minutes(@cardioworkout.saturday_cardio_time_6) %></td>
+                                      <td><%= minutes(@cardioworkout.saturday_cardio_time_7) %></td>
+                                      <td><%= minutes(@cardioworkout.saturday_cardio_time_8) %></td>
+                                      <td><%= minutes(@cardioworkout.saturday_cardio_time_9) %></td>
+                                      <td><%= minutes(@cardioworkout.saturday_cardio_time_10) %></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                            </div><% end %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div><!-- end #workout_show -->
+
+    
+       
