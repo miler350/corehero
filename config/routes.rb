@@ -3,6 +3,7 @@ CoreheroFirst::Application.routes.draw do
     resource :strengthworkout
     resource :cardioworkout
     end
+    get "workout_admin", to: "workouts#admin"
  
 
   devise_for :users do

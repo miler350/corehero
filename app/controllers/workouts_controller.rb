@@ -1,6 +1,10 @@
 class WorkoutsController < ApplicationController
-  def index
+  def admin
     @workouts = Workout.all
+  end
+  
+  def index
+    @workouts = current_user.workouts.all
   end
   
   def new

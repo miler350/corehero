@@ -2378,7 +2378,7 @@ cite { }
   transition: all .3s;
 }
 #process .areas .circle{
-  margin-right: 0px;
+  margin-right: 0px; 
 }
 #process .areas .first{
   margin-left: 0;
@@ -2419,7 +2419,6 @@ cite { }
 }
 
 #client_pref .control-group .form h4 {
-  
 }
 
 /* Responsive
@@ -2427,15 +2426,18 @@ cite { }
 
 #show_workout {
 }
-#show_workout #section_header{
+#show_workout #section_header,
+#user_admin #section_header{
   background: #eee;
 }
-#show_workout .wo_header h5{
+#show_workout .wo_header h5,
+#user_admin .wo_header h5{
   color: #aaa;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
   margin: 0;
 }
-#show_workout .wo_header h2, h3{
+#user_admin .wo_header h2,
+#show_workout .wo_header h2{
   margin-top: 0;
 }
 #show_workout .wo_title {
@@ -2446,8 +2448,8 @@ cite { }
   height: 70px;
   vertical-align: top;
 }
-#show_workout .weekly_workout table th:first-of-type,
-#show_workout .weekly_workout table td:first-of-type{
+table th:first-of-type,
+table td:first-of-type{
   padding-left: 0;
 }
 #show_workout .weekly_workout{
@@ -2459,7 +2461,8 @@ cite { }
   padding-bottom: 20px;
   margin-bottom: 40px;
 }
-#show_workout .weekly_workout .wo_day h4{
+#show_workout h4,
+#user_admin h4{
   color: #08c;
   font-family: 'helvetica neue', sans-serif;
 }
@@ -2468,7 +2471,7 @@ cite { }
   font-family: 'helvetica neue', sans-serif;
   color: #888;
 }
-#show_workout .weekly_workout .wo_day table{
+table{
   font-family: 'helvetica neue', sans-serif;
 }
 #show_workout .weekly_workout .wo_day table td{
@@ -2483,6 +2486,43 @@ cite { }
 .cardio_training table.table.table-condensed tbody th{
   color: #888
 }
+
+ul.nav.nav-pills {
+  margin-bottom: 0;
+}
+
+#admin_section .nav-pills a{
+font-size: 14px;
+font-weight: bold;
+font-family: 'helvetica Neue', sans-serif;
+word-spacing: 1px;
+margin-right: 10px;
+margin-top: 20px;
+margin-bottom: 0;
+}
+
+#admin_section {
+  padding: 0 0 40px 0;
+}
+
+#users, .tab-content {
+  margin-top: 20px;
+}
+
+#users td:last-of-type,
+#users th:last-of-type{
+  padding-left: 20px;
+}
+
+#admin_section .tab-content table td {
+  vertical-align: middle;
+}
+#admin_section .tab-content table td:last-of-type,
+#admin_section .tab-content table th:last-of-type {
+  text-align: center;
+}
+
+
 
 /* Responsive
 -------------------------------------------------- */

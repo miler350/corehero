@@ -1,0 +1,59 @@
+
+     <div id="user_admin">
+        <div id="section_header">
+            <div class="container">
+                <div class="row">
+                    <div class="wo_header">
+                        <div class="wo_title">
+                            <h5>CoreHero Admin Panel</h5>
+                            <h2>Hi, <%= current_user.fullname %></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div id="admin_section">
+        <div class="container">
+            <div class="row">
+                <div class="tab-content">
+                      <div id="users" class="tab-pane active">
+                                <h4>Manage Users</h4>
+                                <table class="table table-condensed">
+                                  <thead>
+                                    <tr>
+                                      <th>Name</th>
+                                      <th>Join Date</th>
+                                      <th>E-mail</th>
+                                      <th>Phone</th>
+                                      <th>Location</th>
+                                      <th>Plan</th>
+                                      <th>Rate</th>
+                                      <th>Actions</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody><% User.all.each do |user| %>
+                                    <tr>
+                                      <td><%= user.fullname %></td>
+                                      <td><%= user.created_at %></td>
+                                      <td><%= user.email %></td>
+                                      <td>510-508-9134</td>
+                                      <td>Dallas, TX</td>
+                                      <td>3M</td>
+                                      <td>$69.99</td>
+                                      <td><p>
+                                            <button class="btn btn-small" type="button">Manage</button>
+                                            <button class="btn btn-small btn-danger" type="button">Delete</button>
+                                          </p>
+                                      </td>
+                                    </tr><% end %>
+                                  </tbody>
+                                </table>
+                            </div><!-- end #users -->
+                      </div><!-- end #tab-content -->
+              </div><!-- end .row -->
+        </div><!-- end .container -->
+    </div><!-- end #admin_section -->
+
+    
+      

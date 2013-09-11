@@ -1,0 +1,12 @@
+<h3> ALL WORKOUTS </h3>
+
+<% @workouts.each do |workout| %>
+	<% respective_path = if Workout.strength_workouts.include? workout.template
+       workout_strengthworkout_path(workout)
+    elsif Workout.cardio_workouts.include? workout.template
+       workout_cardioworkout_path(workout)
+    end %>
+	
+<div>
+<%= "DATE: #{workout.start_date} ----> " %> <%= link_to workout.template, respective_path %> <%= "----> #{workout.users[0].email} " %></div>
+<% end %>
