@@ -201,6 +201,8 @@ ActiveRecord::Schema.define(version: 20130911203448) do
     t.integer  "survey_id"
   end
 
+  add_index "issuances", ["survey_id"], name: "index_issuances_on_survey_id", using: :btree
+
   create_table "strengthworkouts", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
