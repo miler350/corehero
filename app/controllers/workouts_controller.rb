@@ -4,7 +4,7 @@ class WorkoutsController < ApplicationController
   end
   
   def index
-    @workouts = current_user.workouts.all
+    @workouts = current_user.workouts
   end
   
   def new

@@ -1,0 +1,32 @@
+<%= form_for @survey do |f| %>
+<%= f.label :user_id %>
+
+
+										<%= f.collection_select :user_id, User.all, :id, :email, {}, { :multiple => false } %><br>
+                                    
+										
+                                      
+										
+							
+							<%= f.text_field :name, placeholder: "Survey name"%>
+                               
+										<%= f.fields_for :questions do |builder| %>
+										<%= builder.label :content, "Question 1"%>
+										<%= builder.text_area :content %>
+										<%= builder.check_box :_destroy %>
+										<%= builder.label :_destroy, "Remove Question" %>
+										
+										<%= f.fields_for :answers do |sub_builder| %>
+										<%= sub_builder.text_field :content, placeholder: "Answer 1" %>
+										<%= sub_builder.check_box :_destroy %>
+										
+										<%= f.submit "Create", :class => "btn btn-large btn-warning"  %>
+										
+										<% end %>
+										<% end %><br>
+					
+				
+				
+				
+				
+					<% end %>

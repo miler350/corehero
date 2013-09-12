@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130911211343) do
+ActiveRecord::Schema.define(version: 20130912020810) do
+
+  create_table "answers", force: true do |t|
+    t.integer  "question_id"
+    t.string   "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
+
+  add_index "answers", ["user_id"], name: "index_answers_on_user_id", using: :btree
 
   create_table "cardioworkouts", force: true do |t|
     t.datetime "created_at"
@@ -196,6 +206,13 @@ ActiveRecord::Schema.define(version: 20130911211343) do
   create_table "issuances", force: true do |t|
     t.integer  "user_id"
     t.integer  "workout_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "questions", force: true do |t|
+    t.integer  "survey_id"
+    t.string   "content"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

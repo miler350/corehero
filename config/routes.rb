@@ -1,10 +1,11 @@
 CoreheroFirst::Application.routes.draw do
+  resources :surveys
   resources :workouts do 
     resource :strengthworkout
     resource :cardioworkout
     end
     get "workout_admin", to: "workouts#admin"
- 
+    
 
   devise_for :users do
     get "/users/sign_out" => "devise/sessions#destroy"
