@@ -1,4 +1,9 @@
 class User < ActiveRecord::Base
+
+  # Added by Koudoku.
+  has_one :subscription
+
+
   has_many :issuances
   has_many :workouts, through: :issuances
   has_many :answers

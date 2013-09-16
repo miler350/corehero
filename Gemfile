@@ -10,6 +10,8 @@ gem 'rails_12factor', group: :production
 gem 'unicorn'
 gem 'better_errors'
 gem 'devise', '3.0.0'
+gem 'koudoku'
+
 
 
 # Use SCSS for stylesheets
