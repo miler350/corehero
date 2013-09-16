@@ -11,7 +11,7 @@ gem 'unicorn'
 gem 'better_errors'
 gem 'devise', '3.0.0'
 gem 'koudoku'
-
+gem 'figaro'
 
 
 # Use SCSS for stylesheets
