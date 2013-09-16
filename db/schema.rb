@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130912020810) do
+ActiveRecord::Schema.define(version: 20130913180813) do
 
   create_table "answers", force: true do |t|
     t.integer  "question_id"
@@ -203,9 +203,28 @@ ActiveRecord::Schema.define(version: 20130912020810) do
 
   add_index "cardioworkouts", ["workout_id"], name: "index_cardioworkouts_on_workout_id", using: :btree
 
+  create_table "coupons", force: true do |t|
+    t.string   "code"
+    t.string   "free_trial_length"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "issuances", force: true do |t|
     t.integer  "user_id"
     t.integer  "workout_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "plans", force: true do |t|
+    t.string   "name"
+    t.string   "stripe_id"
+    t.float    "price"
+    t.string   "interval"
+    t.text     "features"
+    t.boolean  "highlight"
+    t.integer  "display_order"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -535,6 +554,18 @@ ActiveRecord::Schema.define(version: 20130912020810) do
   end
 
   add_index "strengthworkouts", ["workout_id"], name: "index_strengthworkouts_on_workout_id", using: :btree
+
+  create_table "subscriptions", force: true do |t|
+    t.string   "stripe_id"
+    t.integer  "plan_id"
+    t.string   "last_four"
+    t.integer  "coupon_id"
+    t.string   "card_type"
+    t.float    "current_price"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "surveys", force: true do |t|
     t.string   "name"

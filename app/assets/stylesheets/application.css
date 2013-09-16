@@ -12,5 +12,6 @@
  *= require 'bootstrap.min'
  *= require 'bootstrap-responsive.min.css'
  *= require 'bootstrap-overrides.css'
+ *= require 'koudoku/pricing-table'
  *= require_tree .
  */
