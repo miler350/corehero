@@ -15,8 +15,8 @@ CoreheroFirst::Application.routes.draw do
     get "workout_admin", to: "workouts#admin"
     
 
-  devise_for :users do
-    get "/users/sign_out" => "devise/sessions#destroy"
+  devise_for :users, :controllers => { :registrations => 'registrations', :sessions => 'sessions'  } do
+    get "/users/sign_out" => "sessions#destroy"
   end
   
   # The priority is based upon order of creation: first created -> highest priority.

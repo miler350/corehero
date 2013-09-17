@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   before_filter :configure_permitted_parameters, if: :devise_controller?
+  before_filter :authorize
 
     protected
 
@@ -12,4 +13,20 @@ class ApplicationController < ActionController::Base
       devise_parameter_sanitizer.for(:sign_in) { |u| u.permit(:email, :password) }
       devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:fullname, :email, :password, :password_confirmation, :current_password) }
     end
+    
+    private
+    
+    def current_permission
+      @current_permission ||= Permission.new(current_user)
+    end
+    
+    def authorize
+      if !current_permission.allow?(params[:controller], params[:action])
+        redirect_to main_app.root_path, alert: "Not authorized."
+      end
+    end
+    
+    
+    
+    
 end
