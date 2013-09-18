@@ -1,0 +1,22 @@
+<% number = 0 %>
+<%= f.fields_for :questions do |f| %>
+  
+  <%= f.label :content, "Question" %>
+  <%= f.text_area :content %>
+  <%= f.check_box :_destroy %>
+  <%= f.label :_destroy, "Remove Question", :class => "checkbox inline" %><br />
+  
+    <%#= f.fields_for :answers do |f| %>
+       <%#= render 'answer_fields', f: f %>
+    <%# end %>
+	
+  <% end %>
+  
+  
+  
+  
+  
+  
+  
+  
+  <%# number = 0 // #{number += 1} %>

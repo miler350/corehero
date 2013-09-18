@@ -33,6 +33,7 @@ GEM
       erubis (>= 2.6.6)
     bluecloth (2.2.0)
     builder (3.1.4)
+    cocoon (1.2.0)
     coderay (1.0.9)
     coffee-rails (4.0.0)
       coffee-script (>= 2.2.0)
@@ -145,6 +146,7 @@ PLATFORMS
 
 DEPENDENCIES
   better_errors
+  cocoon
   coffee-rails (~> 4.0.0)
   devise (= 3.0.0)
   figaro
