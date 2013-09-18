@@ -1,0 +1,14 @@
+<% number = 0 %>
+<%= f.fields_for :questions do |f| %>
+  <fieldset>
+  <%= f.label :content, "Question ##{number += 1}" %>
+  <%= f.text_area :content %>
+  <%= f.check_box :_destroy %>
+  <%= f.label :_destroy, "Remove Question", :class => "checkbox inline" %><br />
+  </fieldset>
+    <%= f.fields_for :answers do |f| %>
+       <%= render 'answer_fields', f: f %>
+    <% end %>
+	<%= link_to_add_fields "Add Answer", f, :answers%>
+  <% end %>
+  <%= f.submit "Create", :class => "btn btn-large btn-warning"  %>

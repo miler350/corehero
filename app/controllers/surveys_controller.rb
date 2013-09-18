@@ -25,12 +25,17 @@ class SurveysController < ApplicationController
   end
   
   def edit
-    @survey = current_user.survey.find(params[:id])
-  end
-  
-  def update
-    @survey = current_user.survey.find(params[:id])
-  end
+      @survey = Survey.find(params[:id])
+    end
+
+    def update
+      @survey = Survey.find(params[:id])
+      if @survey.update_attributes(survey_params)
+        redirect_to @survey, notice: "Successfully updated survey."
+      else
+        render :edit
+      end
+    end
   
   def destroy
     
