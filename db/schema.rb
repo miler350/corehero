@@ -11,16 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130918045703) do
+ActiveRecord::Schema.define(version: 20130919131425) do
 
-  create_table "answers", force: true do |t|
-    t.string   "content"
-    t.integer  "question_id"
+  create_table "assessments", force: true do |t|
+    t.integer  "user_id"
+    t.string   "name"
+    t.string   "primary_fitness_goal"
+    t.string   "muscle_groups"
+    t.integer  "days_per_week_of_exercise"
+    t.integer  "number_of_exercise_times_per_day"
+    t.integer  "number_of_meals_per_day"
+    t.string   "alcohol_consumption"
+    t.boolean  "currently_on_program"
+    t.string   "sport_specific_goals"
+    t.string   "performance_specific_goals"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "answers", ["question_id"], name: "index_answers_on_question_id", using: :btree
+  add_index "assessments", ["user_id"], name: "index_assessments_on_user_id", using: :btree
 
   create_table "cardioworkouts", force: true do |t|
     t.datetime "created_at"
@@ -227,15 +236,6 @@ ActiveRecord::Schema.define(version: 20130918045703) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  create_table "questions", force: true do |t|
-    t.string   "content"
-    t.integer  "survey_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "questions", ["survey_id"], name: "index_questions_on_survey_id", using: :btree
 
   create_table "strengthworkouts", force: true do |t|
     t.datetime "created_at"
@@ -564,12 +564,6 @@ ActiveRecord::Schema.define(version: 20130918045703) do
     t.string   "card_type"
     t.float    "current_price"
     t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "surveys", force: true do |t|
-    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

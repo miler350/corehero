@@ -1,22 +1,29 @@
 <%= form_for @survey do |f| %>
 
-<%#= f.label :user_id %>
-<%#= f.collection_select :user_id, User.all, :id, :email, {}, { :multiple => false } %><br>
+<%= f.label :user_id %>
+<%= f.collection_select :user_id, User.all, :id, :email, {}, { :multiple => false } %><br>
                                     
 <%= f.text_field :name, placeholder: "Survey name"%>
-<fieldset>
-<%= render 'question_fields', f: f %>
-<%= link_to_add_association 'add question', f, :questions,  {:'data-association-insertion-method' => :before} %>
-</fieldset>
-<%= f.submit "Create", :class => "btn btn-large btn-warning"  %>
-
-							           
-										
+        <h3>Questions </h3> <!-- Begin Question Nest -->
+	   
+	    <%= f.fields_for :questions do |q| %>
+        <%= q.label :content, "Question" %>
+        <%= q.text_area :content %>
+		<%= link_to_add_association 'add answer', q, :answers,  {:'data-association-insertion-method' => :before} %>
 			
-										
-					
-				
-				
-				
-				
-					<% end %>
+                 <%= q.fields_for :answers do |answer| %>
+				 
+				 <%= answer.text_field :content, placeholder: "Answer" %>
+				 <% end %>
+	            
+                  
+	             <div class = "links">
+       <% end %>
+	   <div class = "links">
+		   <%= link_to_add_association 'add question', f, :questions,  {:'data-association-insertion-method' => :before} %>
+        </div>
+	</div>
+	
+<%= f.submit "Create", :class => "btn btn-large btn-warning"  %> <!-- submit -->
+					           
+<% end %> <!-- end survey form -->
