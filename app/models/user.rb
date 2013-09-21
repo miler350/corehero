@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   has_many :surveys
   has_many :issuances
   has_many :workouts, through: :issuances
+  has_one :assessment
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable

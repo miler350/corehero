@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130919131425) do
+ActiveRecord::Schema.define(version: 20130920220218) do
 
   create_table "assessments", force: true do |t|
     t.integer  "user_id"
@@ -27,6 +27,18 @@ ActiveRecord::Schema.define(version: 20130919131425) do
     t.string   "performance_specific_goals"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "glasses_of_water_per_day"
+    t.integer  "height_ft"
+    t.integer  "height_in"
+    t.integer  "weight_lbs"
+    t.integer  "estimated_bodyfat"
+    t.integer  "years_of_weight_training_experience"
+    t.integer  "years_of_weight_cardio_experience"
+    t.boolean  "current_or_former_athlete"
+    t.boolean  "any_limiting_injuries"
+    t.string   "limiting_injuries"
+    t.boolean  "any_limiting_health_conditions"
+    t.string   "limiting_health"
   end
 
   add_index "assessments", ["user_id"], name: "index_assessments_on_user_id", using: :btree

@@ -19,14 +19,18 @@
 					  <%= devise_error_messages! %>
 					
 
-	                <div class="span12 footer">
-	                    <form>
-	                        <%= f.email_field :email, :autofocus => true, placeholder: "Email", type:"text"  %>
-	                        <%= f.password_field :password, placeholder: "Password", type:"password" %>
-	                        <%= f.password_field :password_confirmation, placeholder: " Confirm Password", type:"password" %>
+	                        
+					  <h3>Warm-up</h3>
+                     <div class="span12 footer">  <%= f.text_field :fullname, placeholder: "Full Name", type:"text"  %> </div><br><br>
+                     <div class="span12 footer">  <%= f.email_field :email, :autofocus => true, placeholder: "Email", type:"text"  %></div><br><br>
+				     <div class="span12 footer">  <%= f.password_field :password, placeholder: "Password", type:"password" %> </div><br><br>
+                     <div class="span12 footer">  <%= f.password_field :password_confirmation, placeholder: " Confirm Password", type:"password" %> </div><br><br>
+							<h3>Workout</h3>
+	                        
+	                        
+	                        <div class="span12 footer">
 							<%= f.submit "Sign up", type: "submit", value:"sign up" %>
-	                    </form>
-	                </div>
+	                        </div>
 
 	                <!-- <div class="span5 remember">
 	                    <label class="checkbox">

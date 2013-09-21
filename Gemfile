@@ -12,7 +12,8 @@ gem 'better_errors'
 gem 'devise', '3.0.0'
 gem 'koudoku'
 gem 'figaro'
-gem 'simple_form'
+gem 'simple_form', '3.0.0rc'
+gem 'formtastic'
 
 
 # Use SCSS for stylesheets

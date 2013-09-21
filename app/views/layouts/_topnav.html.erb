@@ -30,12 +30,11 @@
                     <li><a href="#" class="active">Make Better Decisions.</a></li>
                     <li><a href="#">Train Smarter.</a></li>
                     <li><a href="#">Perform Better.</a></li>
-					<%= link_to 'Pricing', main_app.pricing_path %>
 					<% if user_signed_in?%>
 					<li><%= link_to "Edit Profile", main_app.edit_user_registration_path %></li>
 					<li><%= link_to "Log Out", main_app.destroy_user_session_path %></li>
 					<% else %>
-                    <li><%= link_to "Join CoreHero.", main_app.new_user_registration_path %></li>
+                    <li><%= link_to "Join CoreHero.", main_app.pricing_path %></li>
 					<% end %>
 				
                 </ul>

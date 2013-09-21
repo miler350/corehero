@@ -1,0 +1,139 @@
+
+    <div id="section_header" style="min-height: 0;">
+        <div class="container">
+            <div class="row">
+                <div class="section_header">
+                    <h5 class="blue">JOIN COREHERO</h5>
+                    <h3>Complete your client profile...</h3>
+                    <br/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="client_pref" class="create_workout" style="padding-top: 20px;">
+        <div class="container">
+            <div class="row">
+				<%= simple_form_for @assessment do |f| %>
+                       
+                        <!-- Form Name -->
+                            <div id="" class="">
+                                <hr/>
+                                    <div class="control-group">
+                                        <div class="controls">
+                                            <h5>What is your primary fitness goal?</h5>
+                                            <div class="btn-group">
+												
+												
+												<%= f.input :primary_fitness_goal, 
+												          :collection => [["Weight Loss","Weight Loss"],["Muscle Building","Muscle Building"],["Muscle Definition/Toning","Muscle Definition/Toning"],["Cardio Health","Cardio Health"],["Core Strength","Core Strength"],["Flexibility","Flexibility"]], :label_method => :last, :value_method => :first,:as => :radio_buttons, :item_wrapper_class => 'inline',:checked => true,:label => false %>
+												
+											   
+											
+                                         
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <div class="controls">
+                                            <h5>Are you focused on any particular muscle groups?</h5>
+                                            <div class="btn-group">
+												<%= f.input :muscle_groups, :collection => [["Stomach/Abs","Stomach/Abs"],["Thighs","Thighs"],["Arms","Arms"],["Butt","Butt"],["Chest","Chest"], ["Biceps","Biceps"], ["Calves","Calves"],["Shoulders","Shoulders"]], :label_method => :last, :value_method => :first,:as => :check_boxes, :item_wrapper_class => 'inline',:checked => true,:label => false %>
+														  
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr/>
+                                    <div class="control-group">
+                                        <div class="controls">
+                                            <h5>How many days a week do you currently exercise?</h5>
+                                            <div class="btn-group">
+												<%= f.input :days_per_week_of_exercise, :collection => [["1","1"],["2","2"],["3","3"],["4","4"],["5","5"], ["6","6"], ["7","7"]], :label_method => :last, :value_method => :first,:as => :check_boxes, :item_wrapper_class => 'inline',:checked => true,:label => false %>
+												
+                                             
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <div class="controls">
+                                            <h5>How many times a day are you willing to exercise per week?</h5>
+                                            <div class="btn-group">
+												<%= f.input :number_of_exercise_times_per_day, :collection => [["1","1"],["2","2"],["3","3"],["4","4"]], :label_method => :last, :value_method => :first,:as => :check_boxes, :item_wrapper_class => 'inline',:checked => true,:label => false %>
+				
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <div class="controls">
+                                            <h5>How many times a day do you eat?</h5>
+                                            <div class="btn-group">
+												<%= f.input :number_of_meals_per_day, :collection => [["1","1"],["2","2"],["3","3"],["4","4"],["5","5"], ["6","6"], ["7","7"]], :label_method => :last, :value_method => :first,:as => :check_boxes, :item_wrapper_class => 'inline',:checked => true,:label => false %>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <div class="controls">
+                                            <h5> About many glasses of water do you drink daily?</h5>
+                                            <div class="btn-group">
+												<%= f.input :glasses_of_water_per_day, :collection => [["1","1"],["2","2"],["3","3"],["4","4"],["5","5"], ["6","6"], ["7","7"], ["8","8"], ["8+","8+"]], :label_method => :last, :value_method => :first,:as => :radio_buttons, :item_wrapper_class => 'inline',:checked => true,:label => false %>
+												
+                                              
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <div class="controls">
+                                            <h5>Do you drink alcoholic beverages? If so, how often?</h5>
+                                            <div class="btn-group">
+												<%= f.input :alcohol_consumption, :collection => [["I don't drink","I don't drink"],["Every blue moon","Every blue moon"],["A few times per month","A few times per month"],["Once per week","Once per week"],["2-3 times per week","2-3 times per week"], ["4-6 times per week","4-6 times per week"], ["Daily","Daily"]], :label_method => :last, :value_method => :first,:as => :radio_buttons, :item_wrapper_class => 'inline',:checked => true,:label => false %>
+                                           
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr/>
+                                    <div class="control-group">
+                                        <div class="controls">
+                                            <h5>Are you currently on any other fitness or nutrition program?</h5>
+                                            <div class="btn-group">
+												<%= f.input :currently_on_program, :collection => [["Yes","Yes"],["No","No"]], :label_method => :last, :value_method => :first,:as => :radio_buttons, :item_wrapper_class => 'inline',:checked => true,:label => false %>
+                                            
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <div class="controls">
+                                            <h5>Do you have any sport-specific training goals? If so, which sport?</h5>
+                                            <div class="btn-group">
+												<%= f.input :sport_specific_goals, :collection => [["Baseball","Baseball"],["Basketball","Basketball"],["Boxing","Boxing"],["Football","Football"],["Golf","Golf"],["Hockey","Hockey"],["Lacrosse","Lacrosse"],["MMA","MMA"],["Soccer","Soccer"],["Swimming","Swimming"],["Tennis","Tennis"],["Track & Field","Track & Field"],["Wrestling","Wrestling"]], :label_method => :last, :value_method => :first,:as => :check_boxes, :item_wrapper_class => 'inline',:checked => true,:label => false %>
+												
+												
+							
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <div class="controls">
+                                            <h5>Do you have any performance-specific goals?</h5>
+                                            <div class="btn-group">
+												<%= f.input :performance_specific_goals, :collection => [["Endurance","Endurance"],["Flexibility and Durability","Flexibility and Durability"],["Speed","Speed"],["Strength","Strength"],["All of the Above","All of the Above"]], :label_method => :last, :value_method => :first,:as => :check_boxes, :item_wrapper_class => 'inline',:checked => true,:label => false %>
+												
+								
+											  
+											  <%= f.submit%> 
+                                        </div>
+                                    </div>
+                                    <hr/>
+                                </div>
+                           
+							<% end %>
+                </div>
+            </div>
+        </div>
+
+    
+       
+
+   
