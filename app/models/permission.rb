@@ -10,7 +10,7 @@ class Permission < Struct.new(:user)
       return true if controller == "assessments"  && action.in?(%[new create])
       return true if controller == "devise/registrations" && action.in?(%[edit update])
       return true if controller == "surveys" && action.in?(%[index show])
-      return true if controller == "devise/sessions" && action.in?(%[destroy])
+      return true if controller == "devise/sessions"
       return true if controller == "workouts" && action.in?(%[index])
       return true if controller == "strengthworkouts" && action.in?(%[show])
       return true if controller == "cardioworkouts" && action.in?(%[show])
