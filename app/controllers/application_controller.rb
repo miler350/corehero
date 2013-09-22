@@ -30,9 +30,7 @@ class ApplicationController < ActionController::Base
     end
     
     def authorize
-      if request.path == (new_user_registration_path)
-        true
-      elsif !current_permission.allow?(params[:controller], params[:action])
+     if !current_permission.allow?(params[:controller], params[:action])
         redirect_to main_app.root_path, alert: "Not authorized."
       end
     end

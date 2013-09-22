@@ -2,8 +2,10 @@ class Permission < Struct.new(:user)
   
   def allow?(controller, action)
     return true if controller == "pages"
-    return true if controller == "registrations" && action.in?(%[new create])
-    return true if controller == "sessions" && action.in?(%[new create])
+    return true if controller == "devise/registrations" && action.in?(%[new create])
+    return true if controller == "devise/sessions" && action.in?(%[new create])
+    return true if controller == "koudoku/subscriptions" && action.in?(%[new create index])
+    return true if controller == "koudoku/users" && action.in?(%[new create])
     if user
       return true if controller == "registrations" && action.in?(%[edit update])
       return true if controller == "sessions" && action.in?(%[destroy])

@@ -15,7 +15,6 @@ CoreheroFirst::Application.routes.draw do
     get "workout_admin", to: "workouts#admin"
     
   resources :assessments
-  resources :workout_statuses
     
 
   devise_for :users do
