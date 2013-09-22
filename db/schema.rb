@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130920220218) do
+ActiveRecord::Schema.define(version: 20130922192312) do
 
   create_table "assessments", force: true do |t|
     t.integer  "user_id"
@@ -219,6 +219,7 @@ ActiveRecord::Schema.define(version: 20130920220218) do
     t.string   "saturday_cardio_time_12",       limit: 4
     t.string   "saturday_cardio_time_13",       limit: 4
     t.integer  "workout_id"
+    t.boolean  "complete"
   end
 
   add_index "cardioworkouts", ["workout_id"], name: "index_cardioworkouts_on_workout_id", using: :btree
@@ -564,6 +565,7 @@ ActiveRecord::Schema.define(version: 20130920220218) do
     t.string   "saturday_exercise_ten_tempo",    limit: 12
     t.string   "saturday_exercise_ten_rest",     limit: 6
     t.integer  "workout_id"
+    t.boolean  "complete"
   end
 
   add_index "strengthworkouts", ["workout_id"], name: "index_strengthworkouts_on_workout_id", using: :btree

@@ -1,6 +1,7 @@
 class Strengthworkout < ActiveRecord::Base
   belongs_to :workout
   after_create :fill_in_template, on: :create
+  has_one :workout_status
   
  
  

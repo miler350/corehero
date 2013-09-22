@@ -6,13 +6,14 @@ class AssessmentsController < ApplicationController
   
   def new
     @assessment = Assessment.new
-    @fitnessgoals = ["Weight Loss", "Muscle Building", "Muscle Definition/Toning","Cardio Health", "Core Strength", "Flexibility"]
+   
   end
   
   def create
     @assessment = Assessment.new(assessment_params)
+    
     if @assessment.save
-      @assessment.update(user_id: current_user.id)
+      @assessment.update(user_id: current_user.id, name: "Initial Assessment & Profile")
       redirect_to workouts_path, notice: "Thank you for completing our assessment."
     else
       render 'new'

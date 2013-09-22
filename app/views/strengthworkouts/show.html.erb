@@ -25,6 +25,7 @@
         <div class="container">
             <div class="row">
                             <div id="monday" class="wo_day">
+								
                                 <h4>Monday</h4>
                                 <h5><%= @strengthworkout.monday_workout_description if @strengthworkout.monday_workout_description.present?  %></h5>
                                 <% if @strengthworkout.monday_exercise_one_name.present? %>
@@ -591,11 +592,19 @@
 									  <td><%= @strengthworkout.saturday_exercise_eight_reps if @strengthworkout.saturday_exercise_eight_name?  %></td>
 									  <td><%= @strengthworkout.saturday_exercise_eight_rest if @strengthworkout.saturday_exercise_eight_name?  %></td>
 									  <td><%= @strengthworkout.saturday_exercise_eight_tempo if @strengthworkout.saturday_exercise_eight_name?  %></td>
+									  
+									  
                                       
                                     </tr><% end %>
+								  
                                   </tbody>
                                  
                                 </table>
+							  <%= form_for [@workout, @strengthworkout] do |f|%>
+							  <%= f.label :complete, "Mark workout as complete." %>
+							  <%= f.check_box :complete %>
+							  <%= f.submit %>
+							  <% end %>
                             </div>
                         </div>
                     </div>

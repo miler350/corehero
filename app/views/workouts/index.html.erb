@@ -38,25 +38,21 @@
                                   </thead>
                                   <tbody>
 									  <% @workouts.reverse.each do |workout| %>
-								  	<% type = if Workout.strength_workouts.include? workout.template
-									   workout.strengthworkout
-								      elsif Workout.cardio_workouts.include? workout.template
-								         workout.cardioworkout
-								      end %>
+									  <% type = type(Workout, workout)%>
+								  	  <% respective_path = respective_path(Workout, workout)%>
+									  <% status_icon = status_icon(Workout, workout )%>
+									  <%# test_code = test_code(Workout, workout, created_at)%>
+								 
 									  
-								  	<% respective_path = if Workout.strength_workouts.include? workout.template
-								         workout_strengthworkout_path(workout)
-								      elsif Workout.cardio_workouts.include? workout.template
-								         workout_cardioworkout_path(workout)
-								      end %>
+									 
 									  
                                     <tr>
                                       <td><%= workout.start_date %></td>
                                       <td><%= link_to type.title, respective_path %></td>
                                       <td><%= workout.template %></td>
                                       <td><%= type.days %></td>
-                                      <td><img src="img/icon_new_orange.png"></td>
-									  <td><img src="img/icon_checkmark-g.png" alt=""></td>
+									  <td><%= image_tag status_icon %><%#= test_code.created_at %></td>
+                                   
                                     </tr>
                                     
                                   </tbody>
