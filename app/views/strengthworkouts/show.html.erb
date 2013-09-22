@@ -600,10 +600,12 @@
                                   </tbody>
                                  
                                 </table>
+							<% if @workout.created_at + 29.days <= Time.now %>
 							  <%= form_for [@workout, @strengthworkout] do |f|%>
 							  <%= f.label :complete, "Mark workout as complete." %>
 							  <%= f.check_box :complete %>
 							  <%= f.submit %>
+							  <% end %>
 							  <% end %>
                             </div>
                         </div>

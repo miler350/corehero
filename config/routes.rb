@@ -18,7 +18,7 @@ CoreheroFirst::Application.routes.draw do
   resources :workout_statuses
     
 
-  devise_for :users, :controllers => { :registrations => 'registrations', :sessions => 'sessions'  } do
+  devise_for :users do
     get "/users/sign_out" => "sessions#destroy"
   end
   
