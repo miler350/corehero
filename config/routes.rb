@@ -12,7 +12,8 @@ CoreheroFirst::Application.routes.draw do
     resource :strengthworkout
     resource :cardioworkout
     end
-    get "workout_admin", to: "workouts#admin"
+    get "admin", to: "workouts#admin"
+    get ":user_id/workouts", to: "workouts#index"
     
   resources :assessments
     

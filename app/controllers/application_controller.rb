@@ -7,20 +7,20 @@ class ApplicationController < ActionController::Base
   before_filter :authorize
   
   
-  def after_sign_in_path_for(resource)
-    if current_user.sign_in_count < 2
-     new_assessment_path
-   else
-     workouts_path
-     end
-   end
+  #def after_sign_in_path_for(resource)
+   # if current_user.sign_in_count < 2
+    # new_assessment_path
+   #else
+    # workouts_path
+     #end
+     #end
 
     protected
 
     def configure_permitted_parameters
-      devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:fullname, :email, :password, :password_confirmation) }
+      devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:fullname, :email, :password, :password_confirmation, :city, :state_abbreviation, :phone_number) }
       devise_parameter_sanitizer.for(:sign_in) { |u| u.permit(:email, :password) }
-      devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:fullname, :email, :password, :password_confirmation, :current_password) }
+      devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:fullname, :email, :password, :password_confirmation, :current_password, :city, :state_abbreviation, :phone_number) }
     end
     
     private
