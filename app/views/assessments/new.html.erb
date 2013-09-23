@@ -18,7 +18,27 @@
                        
                         <!-- Form Name -->
                             <div id="" class="">
-                                <hr/>
+                                <hr/> <div class="control-group">
+                                        <div class="controls">
+                                            <h5>What is your primary fitness goal?</h5>
+                                            <div class="btn-group">
+												
+												
+												<%= f.input :height_ft, label: 'Height(ft)', placeholder: "5" %>
+												<%= f.input :height_in, label: 'Height(in)', placeholder: "11" %>
+												<%= f.input :weight_lbs, label: 'Weight(lbs)', placeholder: "196" %>
+												<%= f.input :estimated_bodyfat, label: 'Estimated Body Fat (%)', placeholder: "19" %>
+												<%= f.input :years_of_weight_training_experience, label: 'Years of Weight Training Experience', placeholder: "19" %>
+												<%= f.input :years_of_weight_cardio_experience, label: 'Years of Cardio Training Experience', placeholder: "19" %>
+											    <%= f.input :current_or_former_athlete, inline_label: 'I am a current of former athlete.' %>
+											    <%= f.input :any_limiting_injuries, inline_label: 'Any limiting injuries?' %>
+												<%= f.input :limiting_injuries, label: 'If yes, list them below.', placeholder: "Tendonitis, Stress Fracture, ..." %>
+											    <%= f.input :any_limiting_health_conditions, inline_label: 'Any limiting health conditions?' %>
+												<%= f.input :limiting_health, label: 'If yes, list them below.', placeholder: "Bronchitis" %>
+                                         
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="control-group">
                                         <div class="controls">
                                             <h5>What is your primary fitness goal?</h5>

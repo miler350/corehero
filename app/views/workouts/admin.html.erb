@@ -39,7 +39,7 @@
                                       <td><%= user.email %></td>
                                       <td><%= user.phone_number %></td>
                                       <td><%= user.city %></td>
-                                      <td>3M</td>
+                                      <td><%= plan_abbreviation(user.subscription.current_price) rescue "--" %></td>
                                       <td><%= user.subscription.current_price rescue "Free User"%></td>
                                       <td><p>
                                             <button class="btn btn-small" type="button"><%= link_to "Manage", workouts_path %></button>

@@ -13,3 +13,10 @@
 <h4>Payment Information</h4>
 <p>The card on file for your account ends with <%= @subscription.last_four %>.</p>
 <%= link_to 'Update Payment Information', edit_owner_subscription_path(@owner, @subscription, update: 'card'), class: 'btn' %>
+
+
+<% if current_user.assessment.blank?%>
+<h4>Let's Get Started</h4>
+<p>Take our Initial Assessment.</p>
+<% else %>
+<% end %>

@@ -14,4 +14,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
          
   validates_presence_of :fullname, :city, :state_abbreviation, :phone_number
+  
+  
 end

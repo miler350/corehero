@@ -4,7 +4,7 @@ class WorkoutsController < ApplicationController
   end
   
   def index
-    @workouts = User.find(params[:user_id]).workouts
+    @workouts = current_user.workouts
   end
   
   def new
